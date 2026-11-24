@@ -1,0 +1,82 @@
+{
+ "tag": "NFR05_F005",
+ "base_url": "http://127.0.0.1:9515",
+ "browser": "chrome",
+ "started": "2026-11-24 14:57:31",
+ "seconds": 10.4,
+ "total": 6,
+ "passed": 6,
+ "failed": 0,
+ "errors": 0,
+ "failed_known_defect": [],
+ "failed_unexpected": [],
+ "passed_but_marked_defect": [],
+ "cases": [
+  {
+   "test": "test_nfr05_accessibility.NFR05Accessibility.test_NFR_05_01",
+   "tc_id": "NFR-05-01",
+   "title": "Auto-create groups form as first displayed",
+   "data_file": "axe_pages.csv",
+   "status": "PASS",
+   "known_defect": "",
+   "seconds": 0.45,
+   "message": "",
+   "screenshot": ""
+  },
+  {
+   "test": "test_nfr05_accessibility.NFR05Accessibility.test_NFR_05_02",
+   "tc_id": "NFR-05-02",
+   "title": "Form showing validation errors (empty count)",
+   "data_file": "axe_pages.csv",
+   "status": "PASS",
+   "known_defect": "",
+   "seconds": 3.06,
+   "message": "",
+   "screenshot": ""
+  },
+  {
+   "test": "test_nfr05_accessibility.NFR05Accessibility.test_NFR_05_03",
+   "tc_id": "NFR-05-03",
+   "title": "Form with the preview table",
+   "data_file": "axe_pages.csv",
+   "status": "PASS",
+   "known_defect": "",
+   "seconds": 1.85,
+   "message": "",
+   "screenshot": ""
+  },
+  {
+   "test": "test_nfr05_accessibility.NFR05Accessibility.test_NFR_05_04",
+   "tc_id": "NFR-05-04",
+   "title": "Groups overview page reached after Create/Cancel",
+   "data_file": "axe_pages.csv",
+   "status": "PASS",
+   "known_defect": "",
+   "seconds": 0.28,
+   "message": "",
+   "screenshot": ""
+  },
+  {
+   "test": "test_nfr05_accessibility.NFR05Accessibility.test_NFR_05_05",
+   "tc_id": "NFR-05-05",
+   "title": "Preview groups using only the keyboard (Tab / typing / Enter)",
+   "data_file": "keyboard.csv",
+   "status": "PASS",
+   "known_defect": "",
+   "seconds": 1.32,
+   "message": "",
+   "screenshot": ""
+  },
+  {
+   "test": "test_nfr05_accessibility.NFR05Accessibility.test_NFR_05_06",
+   "tc_id": "NFR-05-06",
+   "title": "Validation error reachable and announced with keyboard only",
+   "data_file": "keyboard.csv",
+   "status": "PASS",
+   "known_defect": "",
+   "seconds": 1.32,
+   "message": "",
+   "screenshot": ""
+  }
+ ]
+}

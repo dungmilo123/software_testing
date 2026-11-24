@@ -1,0 +1,9 @@
+tc_id,title,technique,precondition,namingscheme,groupby,number,roleid,allocateby,nosmallgroups,notingroup,includeonlyactiveenrol,enablemessaging,grouping,groupingname,action,expected_result,then_set,then_action,then_expected,known_defect
+TC-005-008,Group name already used in the course,ECP,"groups=Team @;2;Alphabetically by first name, last name",Team @,,2,,,,,,,,,preview,"error.namingscheme=The group name 'Team A' already exists in this course, please choose another one.",,,,
+TC-005-021,Ignore users already in groups,ECP,"groups=Base @;2;Alphabetically by first name, last name",Extra @,,2,,,,on,,,,,preview,users=0 | row1.count=0,,,,
+TC-005-022,Include only active enrolments,ECP,suspend=kt_s10,,,2,,,,,,,,,preview,users=9,includeonlyactiveenrol=off,preview,users=10,
+TC-005-025,New grouping with an existing name,ECP,grouping=Alpha @;2;KT Grouping,Beta @,,2,,,,,,,New grouping,KT Grouping,preview,"error.groupingname=The grouping name 'KT Grouping' already exists in this course, please choose another one.",,,,
+TC-005-057,DT2-R6: prevent small group only for members mode,DT,,,,,,,,,,,,,none,nosmallgroups=disabled,groupby=Members per group,none,nosmallgroups=enabled,
+TC-005-060,S3: correct an invalid count,UC,,,,11,,,,,,,,,preview,error.number=Insufficient users to populate this number of groups - there are only 10 users in the selected role.,number=5,preview,groups=5,
+TC-005-061,S4: cancel the form,UC,,Temp @,,2,,,,,,,,,cancel,no_groups,,,,
+TC-005-063,S7: duplicate name on submit,UC,"groups=Team @;2;Alphabetically by first name, last name",Team @,,3,,,,,,,,,create,"error.namingscheme=The group name 'Team A' already exists in this course, please choose another one.",,cancel,group=Team A (5) | no_group=Team C,

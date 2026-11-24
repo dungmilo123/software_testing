@@ -1,0 +1,93 @@
+flow,step,keyword,target,value
+before_all,1,call,reset_groups,
+after_all,1,call,reset_groups,
+reset_groups,1,open,course_page,
+reset_groups,2,click,More menu,
+reset_groups,3,submit,Course reuse link,
+reset_groups,4,submit,Reset link,
+reset_groups,5,click,Deselect all,
+reset_groups,6,set,Delete all groups,on
+reset_groups,7,set,Delete all groupings,on
+reset_groups,8,click,Reset course button,
+reset_groups,9,submit,Reset confirm button,
+reset_groups,10,verify,Reset status groups,{{PRESENT}}
+open_form,1,open,course_page,
+open_form,2,click,Participants link,
+open_form,3,click,Page selector,
+open_form,4,submit,Groups menu option,
+open_form,5,submit,Auto-create groups button,
+open_form,6,verify,Form heading,Auto-create groups
+open_form,7,helper,expand_all,
+preview,1,call,open_form,
+preview,2,fill,,
+preview,3,submit,Preview,
+preview,4,verify_expected,,
+create,1,cleanup,reset_groups,
+create,2,call,open_form,
+create,3,fill,,
+create,4,submit,Submit,
+create,5,verify_expected,,
+preview_then_create,1,cleanup,reset_groups,
+preview_then_create,2,call,open_form,
+preview_then_create,3,fill,,
+preview_then_create,4,submit,Preview,
+preview_then_create,5,verify_expected,,
+preview_then_create,6,submit,Submit,
+preview_then_create,7,verify,Groups list,{{CONTAINS=${then_expected}}}
+preview_then_create,8,verify,Groups list,{{CONTAINS=${then_expected_2}}}
+preview_then_create,9,verify,Groups list,{{CONTAINS=${then_expected_3}}}
+create_check_messaging,1,cleanup,reset_groups,
+create_check_messaging,2,call,open_form,
+create_check_messaging,3,fill,,
+create_check_messaging,4,submit,Submit,
+create_check_messaging,5,verify_expected,,
+create_check_messaging,6,set,Groups list (select),${then_value}
+create_check_messaging,7,submit,Edit group settings button,
+create_check_messaging,8,verify,Group messaging,${then_expected}
+create_check_grouping,1,cleanup,reset_groups,
+create_check_grouping,2,call,open_form,
+create_check_grouping,3,fill,,
+create_check_grouping,4,submit,Submit,
+create_check_grouping,5,verify_expected,,
+create_check_grouping,6,click,Page selector,
+create_check_grouping,7,submit,Groupings menu option,
+create_check_grouping,8,verify,Groupings table,{{CONTAINS=${then_expected}}}
+prepare_groups,1,call,open_form,
+prepare_groups,2,set,Naming scheme,${pre_scheme}
+prepare_groups,3,set,Group/member count,${pre_number}
+prepare_groups,4,set,Allocate members,${pre_allocation}
+prepare_groups,5,set,Grouping of auto-created groups,${pre_grouping}
+prepare_groups,6,set,Grouping name,${pre_grouping_name}
+prepare_groups,7,submit,Submit,
+prepare_groups,8,verify,Auto-create groups button,{{PRESENT}}
+existing_then_preview,1,cleanup,reset_groups,
+existing_then_preview,2,call,prepare_groups,
+existing_then_preview,3,call,preview,
+existing_then_create_cancel,1,cleanup,reset_groups,
+existing_then_create_cancel,2,call,prepare_groups,
+existing_then_create_cancel,3,call,open_form,
+existing_then_create_cancel,4,fill,,
+existing_then_create_cancel,5,submit,Submit,
+existing_then_create_cancel,6,verify_expected,,
+existing_then_create_cancel,7,submit,Cancel,
+existing_then_create_cancel,8,verify,Groups list,{{CONTAINS=${then_expected}}}
+existing_then_create_cancel,9,verify,Groups list,{{NOTCONTAINS=${then_expected_2}}}
+suspended_user_preview,1,helper,set_enrolment_status,${pre_user};Suspended
+suspended_user_preview,2,cleanup,activate_user,
+suspended_user_preview,3,call,preview,
+suspended_user_preview,4,set,Include only active enrolments,off
+suspended_user_preview,5,submit,Preview,
+suspended_user_preview,6,verify,Preview user count header,${then_expected}
+activate_user,1,helper,set_enrolment_status,${pre_user};Active
+preview_correct_preview,1,call,preview,
+preview_correct_preview,2,set,Group/member count,${then_value}
+preview_correct_preview,3,submit,Preview,
+preview_correct_preview,4,verify,Preview groups header,${then_expected}
+dependency_check,1,call,open_form,
+dependency_check,2,verify_expected,,
+dependency_check,3,set,Auto create based on,${then_value}
+dependency_check,4,verify,Prevent last small group,${then_expected}
+cancel_form,1,call,open_form,
+cancel_form,2,fill,,
+cancel_form,3,submit,Cancel,
+cancel_form,4,verify_expected,,

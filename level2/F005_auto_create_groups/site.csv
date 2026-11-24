@@ -1,0 +1,4 @@
+key,value
+base_url,
+course_page,/course/view.php?name=KTC01
+participants_page,/course/view.php?name=KTC01

@@ -1,0 +1,8 @@
+tc_id,title,technique,precondition,namingscheme,groupby,number,roleid,allocateby,nosmallgroups,notingroup,includeonlyactiveenrol,enablemessaging,grouping,groupingname,action,expected_result,then_set,then_action,then_expected,known_defect
+TC-005-020,Group messaging enabled,ECP,,Chat @,,1,,,,,,Yes,,,create,group=Chat A (10) | messaging=Chat A (10): Yes,,,,
+TC-005-023,Create groups in a new grouping,ECP,,Team @,,2,,,,,,,New grouping,KT Grouping,create,"group=Team A (5) | group=Team B (5) | grouping=KT Grouping: Team A, Team B",,,,
+TC-005-044,Group name of 254 characters (max),BVA,,{{N*253}}#,,1,,,,,,,,,create,group={{N*253}}1 (10),,,,
+TC-005-045,Group name of 255 characters (max+1),BVA,,{{M*254}}#,,1,,,,,,,,,create,no_text=Error writing to database | error.namingscheme=*,,,,"D-04 a 255-character group name gives ""Error writing to database"""
+TC-005-058,"S1: preview, then create groups",UC,,Class @,,3,,"Alphabetically by first name, last name",,,,,,,preview,groups=3 | row1.count=4,,create,group=Class A (4) | group=Class B (3) | group=Class C (3),
+TC-005-059,S2: create groups without preview,UC,,Lab #,Members per group,5,,,,,,,,,create,group=Lab 1 (5) | group=Lab 2 (5),,,,
+TC-005-062,S6: create empty groups,UC,,Empty @,,2,,No allocation,,,,,,,create,group=Empty A (0) | group=Empty B (0),,,,

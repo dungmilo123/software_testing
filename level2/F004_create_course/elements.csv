@@ -1,0 +1,32 @@
+name,locator,kind,description
+Form heading,css=h2,label,heading of the Add a new course page
+Full name,id=id_fullname,text,Course full name
+Short name,id=id_shortname,text,Course short name
+Course ID number,id=id_idnumber,text,Course ID number
+Full name (typed),id=id_fullname,keyboard,Course full name typed key by key (HTML maxlength applies)
+Short name (typed),id=id_shortname,keyboard,Course short name typed key by key
+Course ID number (typed),id=id_idnumber,keyboard,Course ID number typed key by key
+Course visibility,id=id_visible,select,Show / Hide
+Course start date,id=id_startdate,date,date selector (day/month/year/hour/minute)
+Course end date,id=id_enddate,date,date selector with Enable checkbox
+Course format,id=id_format,select,Custom sections / Weekly sections / Single activity
+Number of announcements,id=id_newsitems,select,0..10
+Show gradebook to students,id=id_showgrades,select,Yes / No
+Show activity reports,id=id_showreports,select,Yes / No
+Show activity dates,id=id_showactivitydates,select,Yes / No
+Enable completion tracking,id=id_enablecompletion,select,Yes / No
+Group mode,id=id_groupmode,select,No groups / Separate groups / Visible groups
+Force group mode,id=id_groupmodeforce,select,Yes / No
+Course summary,id=id_summary_editor,editor,TinyMCE editor
+Save and display,id=id_saveanddisplay,button,
+Save and return,id=id_saveandreturn,button,only on the form opened from course management
+Cancel,id=id_cancel,button,
+Full name error,id=id_error_fullname,label,validation message under Course full name
+Short name error,id=id_error_shortname,label,validation message under Course short name
+ID number error,id=id_error_idnumber,label,validation message under Course ID number
+End date error,id=id_error_enddate,label,validation message under Course end date
+Course heading,css=h1,label,heading of the course page after Save and display
+Course link in list,xpath=//a[normalize-space(.)='${Full name}'],link,new course in the Manage courses list after Save and return
+Search results,id=region-main,label,course management search result area
+Course delete link,"xpath=//a[contains(@href,'/course/delete.php')]",link,first Delete icon in the search result
+Delete confirm button,"xpath=//form[contains(@action,'delete.php')]//button[@type='submit']",button,Delete on the confirmation page

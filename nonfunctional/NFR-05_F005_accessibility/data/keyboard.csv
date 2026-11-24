@@ -1,0 +1,3 @@
+tc_id,title,namingscheme,number,submit_with,max_tabs,expected_result
+NFR-05-05,Preview groups using only the keyboard (Tab / typing / Enter),Key @,2,id_preview,80,Groups (2)
+NFR-05-06,Validation error reachable and announced with keyboard only,Key @,{{EMPTY}},id_preview,80,Required

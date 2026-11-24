@@ -1,0 +1,38 @@
+{
+ "tag": "test_99_cleanup",
+ "base_url": "http://127.0.0.1:9514",
+ "browser": "chrome",
+ "started": "2026-11-24 14:34:56",
+ "seconds": 11.0,
+ "total": 2,
+ "passed": 2,
+ "failed": 0,
+ "errors": 0,
+ "failed_known_defect": [],
+ "failed_unexpected": [],
+ "passed_but_marked_defect": [],
+ "cases": [
+  {
+   "test": "test_99_cleanup.Cleanup99.test_CLEANUP_01",
+   "tc_id": "CLEANUP-01",
+   "title": "Delete course KTC01",
+   "data_file": "cleanup.csv",
+   "status": "PASS",
+   "known_defect": "",
+   "seconds": 0.43,
+   "message": "",
+   "screenshot": ""
+  },
+  {
+   "test": "test_99_cleanup.Cleanup99.test_CLEANUP_02",
+   "tc_id": "CLEANUP-02",
+   "title": "Delete users kt_s01..kt_s10",
+   "data_file": "cleanup.csv",
+   "status": "PASS",
+   "known_defect": "",
+   "seconds": 8.41,
+   "message": "",
+   "screenshot": ""
+  }
+ ]
+}

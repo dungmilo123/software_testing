@@ -1,0 +1,5 @@
+tc_id,title,state,namingscheme,number,action,wcag_tags,blocking_impacts,expected_result
+NFR-05-01,Auto-create groups form as first displayed,form,,,,wcag2a;wcag2aa;wcag21a;wcag21aa,critical;serious,0 critical/serious WCAG 2.1 A/AA violations
+NFR-05-02,Form showing validation errors (empty count),form,Team @,{{EMPTY}},preview,wcag2a;wcag2aa;wcag21a;wcag21aa,critical;serious,0 critical/serious WCAG 2.1 A/AA violations
+NFR-05-03,Form with the preview table,form,Team @,2,preview,wcag2a;wcag2aa;wcag21a;wcag21aa,critical;serious,0 critical/serious WCAG 2.1 A/AA violations
+NFR-05-04,Groups overview page reached after Create/Cancel,groups,,,,wcag2a;wcag2aa;wcag21a;wcag21aa,critical;serious,0 critical/serious WCAG 2.1 A/AA violations

@@ -1,0 +1,96 @@
+tc_id,title,status,known_defect,seconds,message,screenshot,data_file,test
+TC-005-001,Naming scheme with one '@',PASS,,4.36,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_001
+TC-005-002,Naming scheme with one '#',PASS,,4.33,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_002
+TC-005-003,Naming scheme without placeholder,PASS,,4.22,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_003
+TC-005-004,Naming scheme with two placeholders,PASS,,4.29,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_004
+TC-005-005,Empty naming scheme,PASS,,5.62,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_005
+TC-005-006,Naming scheme of spaces only,PASS,,4.28,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_006
+TC-005-007,Literal name for a single group,PASS,,4.3,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_007
+TC-005-008,Group name already used in the course,PASS,,13.65,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_008
+TC-005-009,Non-numeric group count,PASS,,5.62,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_009
+TC-005-010,Empty group count,PASS,,5.57,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_010
+TC-005-011,Negative group count,PASS,,4.8,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_011
+TC-005-012,Decimal group count,PASS,,4.19,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_012
+TC-005-013,Members per group,PASS,,4.33,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_013
+TC-005-014,Role Teacher,PASS,,4.25,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_014
+TC-005-015,Role All,PASS,,4.41,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_015
+TC-005-016,No allocation,PASS,,4.46,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_016
+TC-005-017,Alphabetical by first name,PASS,,4.43,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_017
+TC-005-018,Alphabetical by last name,PASS,,4.25,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_018
+TC-005-019,Alphabetical by ID number,PASS,,4.29,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_019
+TC-005-020,Group messaging enabled,PASS,,10.1,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_020
+TC-005-021,Ignore users already in groups,PASS,,13.78,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_021
+TC-005-022,Include only active enrolments,PASS,,7.99,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_022
+TC-005-023,Create groups in a new grouping,PASS,,9.62,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_023
+TC-005-024,New grouping without a name,PASS,,4.36,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_024
+TC-005-025,New grouping with an existing name,PASS,,13.85,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_025
+TC-005-026,Number of groups = 0 (min-1),PASS,,4.27,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_026
+TC-005-027,Number of groups = 1 (min),PASS,,4.29,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_027
+TC-005-028,Number of groups = 2 (min+1),PASS,,4.26,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_028
+TC-005-029,Number of groups = 5 (nominal),PASS,,4.28,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_029
+TC-005-030,Number of groups = 9 (max-1),PASS,,4.34,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_030
+TC-005-031,Number of groups = 10 (max),PASS,,4.3,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_031
+TC-005-032,Number of groups = 11 (max+1),PASS,,4.26,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_032
+TC-005-033,"Teacher role, 1 group (max)",PASS,,4.36,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_033
+TC-005-034,"Role All, 12 groups (max+1)",PASS,,4.31,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_034
+TC-005-035,Members per group = 0 (min-1),FAIL,"D-01 Members per group = 0 shows ""Exception - Division by zero""",4.29,"Lists differ: [] != [""Page body (css=body) must not contain 'D[69 chars]age']
+
+Second list contains 2 additional elements.
+First extra element 0:
+""Page body (css=body) must not contain 'Division by zero'""
+
+- []
++ [""Page body (css=body) must not contain 'Division by zero'"",
++  'Count error (id=id_error_number) must show a message']",results/screenshots/test_TC_005_035.png,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_035
+TC-005-036,Members per group = 1 (min),PASS,,4.39,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_036
+TC-005-037,Members per group = 2 (min+1),PASS,,4.37,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_037
+TC-005-038,Members per group = 9 (N-1),PASS,,4.41,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_038
+TC-005-039,Members per group = 10 (N),PASS,,4.35,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_039
+TC-005-040,Members per group = 11 (N+1),PASS,,4.49,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_040
+TC-005-041,Members per group = 9999 (max field length (4 digits)),PASS,,4.54,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_041
+TC-005-042,Members per group = -1,FAIL,"D-03 Members per group = -1 previews ""Groups (-10)"" without an error",4.38,"Lists differ: [] != [""Page body (css=body) must not contain 'G[65 chars]age']
+
+Second list contains 2 additional elements.
+First extra element 0:
+""Page body (css=body) must not contain 'Groups (-10)'""
+
+- []
++ [""Page body (css=body) must not contain 'Groups (-10)'"",
++  'Count error (id=id_error_number) must show a message']",results/screenshots/test_TC_005_042.png,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_042
+TC-005-043,Naming scheme of 1 character,PASS,,4.43,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_043
+TC-005-044,Group name of 254 characters (max),PASS,,9.56,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_044
+TC-005-045,Group name of 255 characters (max+1),FAIL,"D-04 a 255-character group name gives ""Error writing to database""",4.35,"Lists differ: [] != [""Page body (css=body) must not contain 'E[92 chars]age']
+
+Second list contains 2 additional elements.
+First extra element 0:
+""Page body (css=body) must not contain 'Error writing to database'""
+
+- []
++ [""Page body (css=body) must not contain 'Error writing to database'"",
++  'Naming scheme error (id=id_error_namingscheme) must show a message']",results/screenshots/test_TC_005_045.png,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_045
+TC-005-046,Grouping name of 1 character,PASS,,4.59,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_046
+TC-005-047,"DT1-R3: no allocation, count above users",PASS,,4.4,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_047
+TC-005-048,DT1-R6: bad name and too many groups,PASS,,4.31,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_048
+TC-005-049,DT1-R8: members mode without placeholder,PASS,,4.32,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_049
+TC-005-050,"DT1-R9: no allocation, zero groups",FAIL,"D-02 Number of groups = 0 with No allocation shows ""Exception - Division by zero""",4.33,"Lists differ: [] != [""Page body (css=body) must not contain 'D[69 chars]age']
+
+Second list contains 2 additional elements.
+First extra element 0:
+""Page body (css=body) must not contain 'Division by zero'""
+
+- []
++ [""Page body (css=body) must not contain 'Division by zero'"",
++  'Count error (id=id_error_number) must show a message']",results/screenshots/test_TC_005_050.png,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_050
+TC-005-051,"DT1-R10: no allocation, members per group",PASS,,4.3,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_051
+TC-005-052,"DT2-R1: prevent small group off, 10 users, 5 per group",PASS,,4.29,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_052
+TC-005-053,"DT2-R2: prevent small group off, 10 users, 4 per group",PASS,,4.3,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_053
+TC-005-054,"DT2-R3: prevent small group on, 10 users, 5 per group",PASS,,4.38,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_054
+TC-005-055,"DT2-R4: prevent small group on, 10 users, 4 per group",PASS,,4.37,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_055
+TC-005-056,"DT2-R5: prevent small group on, 11 users, 4 per group",PASS,,4.45,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_056
+TC-005-057,DT2-R6: prevent small group only for members mode,PASS,,2.94,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_057
+TC-005-058,"S1: preview, then create groups",PASS,,10.67,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_058
+TC-005-059,S2: create groups without preview,PASS,,9.53,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_059
+TC-005-060,S3: correct an invalid count,PASS,,5.53,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_060
+TC-005-061,S4: cancel the form,PASS,,4.42,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_061
+TC-005-062,S6: create empty groups,PASS,,9.35,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_062
+TC-005-063,S7: duplicate name on submit,PASS,,14.95,,,testdata.csv,level2.l2engine.L2F005AutoCreateGroups.test_TC_005_063

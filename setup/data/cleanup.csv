@@ -1,0 +1,3 @@
+tc_id,title,object,name,expected_result
+CLEANUP-01,Delete course KTC01,course,KTC01,No courses were found
+CLEANUP-02,Delete users kt_s01..kt_s10,users,kt_s,0 users with username starting kt_s

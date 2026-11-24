@@ -1,0 +1,72 @@
+name,locator,kind,description
+Participants link,xpath=//a[normalize-space(.)='Participants'],link,course secondary navigation
+Page selector,"xpath=//div[contains(@class,'select-menu')]//*[@role='combobox']",button,tertiary navigation drop-down (Enrolled users / Groups / ...)
+Groups menu option,xpath=//li[@role='option' and normalize-space(.)='Groups'],link,
+Groupings menu option,xpath=//li[@role='option' and normalize-space(.)='Groupings'],link,
+Auto-create groups button,id=showautocreategroupsform,button,on the Groups page
+Form heading,xpath=//div[@role='main']//h2,label,
+Naming scheme,id=id_namingscheme,text,
+Auto create based on,id=id_groupby,select,Number of groups / Members per group
+Group/member count,id=id_number,text,
+Select members from role,id=id_roleid,select,
+Allocate members,id=id_allocateby,select,
+Prevent last small group,id=id_nosmallgroups,checkbox,
+Ignore users in groups,id=id_notingroup,checkbox,
+Include only active enrolments,id=id_includeonlyactiveenrol,checkbox,
+Group messaging,id=id_enablemessaging,select,also on the Edit group settings form
+Grouping of auto-created groups,id=id_grouping,select,
+Grouping name,id=id_groupingname,text,
+Preview,id=id_preview,button,
+Submit,id=id_submitbutton,button,creates the groups
+Cancel,id=id_cancel,button,
+Naming scheme error,id=id_error_namingscheme,label,
+Count error,id=id_error_number,label,
+Grouping name error,id=id_error_groupingname,label,
+Preview groups header,"xpath=//table[contains(@class,'generaltable')]/thead/tr/th[1]",label,"""Groups (N)"""
+Preview members header,"xpath=//table[contains(@class,'generaltable')]/thead/tr/th[2]",label,missing with No allocation
+Preview user count header,"xpath=//table[contains(@class,'generaltable')]/thead/tr/th[3]",label,"""User count (N)"""
+Preview row 1 name,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[1]/td[1]",label,
+Preview row 1 members,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[1]/td[2]",label,
+Preview row 1 count,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[1]/td[3]",label,
+Preview row 2 name,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[2]/td[1]",label,
+Preview row 2 members,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[2]/td[2]",label,
+Preview row 2 count,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[2]/td[3]",label,
+Preview row 3 name,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[3]/td[1]",label,
+Preview row 3 members,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[3]/td[2]",label,
+Preview row 3 count,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[3]/td[3]",label,
+Preview row 4 name,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[4]/td[1]",label,
+Preview row 4 members,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[4]/td[2]",label,
+Preview row 4 count,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[4]/td[3]",label,
+Preview row 5 name,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[5]/td[1]",label,
+Preview row 5 members,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[5]/td[2]",label,
+Preview row 5 count,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[5]/td[3]",label,
+Preview row 6 name,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[6]/td[1]",label,
+Preview row 6 members,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[6]/td[2]",label,
+Preview row 6 count,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[6]/td[3]",label,
+Preview row 7 name,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[7]/td[1]",label,
+Preview row 7 members,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[7]/td[2]",label,
+Preview row 7 count,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[7]/td[3]",label,
+Preview row 8 name,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[8]/td[1]",label,
+Preview row 8 members,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[8]/td[2]",label,
+Preview row 8 count,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[8]/td[3]",label,
+Preview row 9 name,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[9]/td[1]",label,
+Preview row 9 members,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[9]/td[2]",label,
+Preview row 9 count,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[9]/td[3]",label,
+Preview row 10 name,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[10]/td[1]",label,
+Preview row 10 members,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[10]/td[2]",label,
+Preview row 10 count,"xpath=//table[contains(@class,'generaltable')]/tbody/tr[10]/td[3]",label,
+Groups list,css=select#groups,label,text of all groups on the Groups page
+Groups list (select),id=groups,select,used to select one group
+Group option,xpath=//select[@id='groups']//option,label,any group option
+Edit group settings button,id=showeditgroupsettingsform,button,
+Groupings table,"xpath=//table[contains(@class,'generaltable')]/tbody",label,Groupings overview
+Page body,css=body,label,whole page text
+More menu,"xpath=//div[contains(@class,'secondary-navigation')]//a[normalize-space(.)='More']",link,
+Course reuse link,xpath=//a[normalize-space(.)='Course reuse'],link,
+Reset link,"xpath=//a[contains(@href,'/course/reset.php') and normalize-space(.)='Reset']",link,
+Deselect all,id=id_deselectall,button,
+Delete all groups,id=id_reset_groups_remove,checkbox,
+Delete all groupings,id=id_reset_groupings_remove,checkbox,
+Reset course button,id=id_submitbutton,button,
+Reset confirm button,"xpath=//div[contains(@class,'modal') and contains(@class,'show')]//button[@data-action='delete']",button,
+Reset status groups,xpath=//table//tr[td[normalize-space(.)='All groups'] and td[normalize-space(.)='Done']],label,

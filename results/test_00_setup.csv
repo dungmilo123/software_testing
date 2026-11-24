@@ -1,0 +1,12 @@
+tc_id,title,status,known_defect,seconds,message,screenshot,data_file,test
+SETUP-01,Create student kt_s01,PASS,,2.72,,,students.csv,test_00_setup.Setup00.test_SETUP_01
+SETUP-02,Create student kt_s02,PASS,,2.3,,,students.csv,test_00_setup.Setup00.test_SETUP_02
+SETUP-03,Create student kt_s03,PASS,,2.43,,,students.csv,test_00_setup.Setup00.test_SETUP_03
+SETUP-04,Create student kt_s04,PASS,,2.3,,,students.csv,test_00_setup.Setup00.test_SETUP_04
+SETUP-05,Create student kt_s05,PASS,,2.28,,,students.csv,test_00_setup.Setup00.test_SETUP_05
+SETUP-06,Create student kt_s06,PASS,,2.43,,,students.csv,test_00_setup.Setup00.test_SETUP_06
+SETUP-07,Create student kt_s07,PASS,,2.29,,,students.csv,test_00_setup.Setup00.test_SETUP_07
+SETUP-08,Create student kt_s08,PASS,,2.4,,,students.csv,test_00_setup.Setup00.test_SETUP_08
+SETUP-09,Create student kt_s09,PASS,,2.31,,,students.csv,test_00_setup.Setup00.test_SETUP_09
+SETUP-10,Create student kt_s10,PASS,,2.28,,,students.csv,test_00_setup.Setup00.test_SETUP_10
+SETUP-11,Create course KTC01 and enrol kt_s01..kt_s10 as Student,PASS,,3.87,,,course.csv,test_00_setup.Setup00.test_SETUP_11

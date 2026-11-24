@@ -1,0 +1,82 @@
+tc_id,title,status,known_defect,seconds,message,screenshot,data_file,test
+TC-004-001,Valid course creation with default settings,PASS,,4.1,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_001
+TC-004-002,Empty course full name,PASS,,4.42,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_002
+TC-004-003,Course full name containing only spaces,FAIL,D-04 whitespace-only full name is accepted,8.22,"Lists differ: [] != [""Full name error (id=id_error_fullname): [71 chars]e')""]
+
+Second list contains 1 additional elements.
+First extra element 0:
+""Full name error (id=id_error_fullname): element id=id_error_fullname not found (expected text 'Missing full name')""
+
+- []
++ ['Full name error (id=id_error_fullname): element id=id_error_fullname not '
++  ""found (expected text 'Missing full name')""]",results/screenshots/test_TC_004_003.png,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_003
+TC-004-004,Empty course short name,PASS,,4.1,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_004
+TC-004-005,Course short name containing only spaces,FAIL,D-05 whitespace-only short name is accepted,8.22,"Lists differ: [] != [""Short name error (id=id_error_shortname)[75 chars]e')""]
+
+Second list contains 1 additional elements.
+First extra element 0:
+""Short name error (id=id_error_shortname): element id=id_error_shortname not found (expected text 'Missing short name')""
+
+- []
++ ['Short name error (id=id_error_shortname): element id=id_error_shortname not '
++  ""found (expected text 'Missing short name')""]",results/screenshots/test_TC_004_005.png,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_005
+TC-004-006,Duplicate course short name,PASS,,3.19,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_006
+TC-004-007,Course visibility set to Hide,PASS,,3.9,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_007
+TC-004-008,Course end date enabled and greater than start date,PASS,,3.93,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_008
+TC-004-009,Course end date equal to start date,PASS,,3.98,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_009
+TC-004-010,Course end date earlier than start date,PASS,,3.27,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_010
+TC-004-011,Unique course ID number provided,PASS,,3.97,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_011
+TC-004-012,Duplicate course ID number,PASS,,3.36,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_012
+TC-004-013,Course format set to Weekly format,PASS,,4.2,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_013
+TC-004-014,Course format options offered (Social format not available),PASS,,0.38,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_014
+TC-004-015,Course format set to Single activity format,PASS,,4.54,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_015
+TC-004-016,Number of announcements set to 0,PASS,,3.6,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_016
+TC-004-017,Number of announcements set to 10,PASS,,3.62,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_017
+TC-004-018,Show gradebook to students set to No,PASS,,3.64,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_018
+TC-004-019,Show activity reports set to Yes,PASS,,3.56,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_019
+TC-004-020,Show activity dates set to No,PASS,,3.68,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_020
+TC-004-021,Enable completion tracking set to No,PASS,,3.85,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_021
+TC-004-022,Group mode set to Separate groups,PASS,,4.08,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_022
+TC-004-023,Group mode set to Visible groups,PASS,,4.08,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_023
+TC-004-024,Force group mode set to Yes,PASS,,3.85,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_024
+TC-004-025,Valid course summary entered in summary editor,PASS,,3.6,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_025
+TC-004-026,Course full name length = 1 character (min),PASS,,3.82,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_026
+TC-004-027,Course full name length = 2 characters (min+1),PASS,,3.65,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_027
+TC-004-028,Course full name length = 50 characters (nominal),PASS,,3.67,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_028
+TC-004-029,Course full name length = 1332 characters (max-1),PASS,,3.59,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_029
+TC-004-030,Course full name length = 1333 characters (max),PASS,,3.64,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_030
+TC-004-031,Course full name length = 1334 characters (max+1),PASS,,1.33,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_031
+TC-004-032,Course short name length = 1 character (min),PASS,,3.75,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_032
+TC-004-033,Course short name length = 2 characters (min+1),PASS,,3.63,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_033
+TC-004-034,Course short name length = 10 characters (nominal),PASS,,4.22,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_034
+TC-004-035,Course short name length = 254 characters (max-1),PASS,,3.85,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_035
+TC-004-036,Course short name length = 255 characters (max),PASS,,3.77,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_036
+TC-004-037,Course short name length = 256 characters (max+1),PASS,,0.66,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_037
+TC-004-038,Course ID number length = 1 character (min+1),PASS,,3.9,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_038
+TC-004-039,Course ID number length = 15 characters (nominal),PASS,,3.84,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_039
+TC-004-040,Course ID number length = 99 characters (max-1),PASS,,3.99,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_040
+TC-004-041,Course ID number length = 100 characters (max),PASS,,3.99,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_041
+TC-004-042,Course ID number length = 101 characters (max+1),PASS,,0.53,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_042
+TC-004-043,Number of announcements = 1 (min+1),PASS,,3.83,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_043
+TC-004-044,Number of announcements = 9 (max-1),PASS,,3.96,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_044
+TC-004-045,Course end date = Start date - 1 day (date min-1),PASS,,3.69,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_045
+TC-004-046,Course end date = Start date + 1 minute (date min+1),PASS,,4.08,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_046
+TC-004-047,DT-R2: Save and return with valid inputs,PASS,,3.92,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_047
+TC-004-048,DT-R3: Cancel button clicked on initial form,PASS,,2.06,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_048
+TC-004-049,DT-R6: Both full name and short name missing,PASS,,4.22,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_049
+TC-004-050,DT-R10: Duplicate short name and duplicate ID number,PASS,,3.35,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_050
+TC-004-051,DT-R11: Duplicate short name and end date earlier than start date,PASS,,3.25,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_051
+TC-004-052,DT-R12: Missing full name and duplicate short name,PASS,,4.23,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_052
+TC-004-053,"DT-R13: Full name, unique short name, unique ID, valid end date, Save and return",PASS,,4.26,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_053
+TC-004-054,DT-R14: Valid inputs entered then Cancel clicked,PASS,,2.04,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_054
+TC-004-055,DT-R15: All optional fields filled then Cancel clicked,PASS,,2.13,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_055
+TC-004-056,DT-R16: Save and return with Course visibility set to Hide,PASS,,3.7,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_056
+TC-004-057,DT-R17: Save and return with valid End date enabled,PASS,,4.01,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_057
+TC-004-058,S1: Main success flow - Save and display,PASS,,3.77,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_058
+TC-004-059,S2: Alternative flow A1 - Save and return,PASS,,3.67,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_059
+TC-004-060,S3: Alternative flow A2 - Correct invalid input and save,PASS,,5.59,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_060
+TC-004-061,S4: Alternative flow A3 - Cancel course creation,PASS,,2.05,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_061
+TC-004-062,S5: Alternative flow A4 - Course with valid end date,PASS,,3.81,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_062
+TC-004-063,S6: Alternative flow A5 - Course visibility set to Hidden,PASS,,3.97,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_063
+TC-004-064,"S7: Exception flow E3 - Duplicate short name, then cancel",PASS,,3.79,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_064
+TC-004-065,"S8: Exception flow E5 - End date earlier than start date, correct and save",PASS,,4.5,,,testdata.csv,level2.l2engine.L2F004CreateCourse.test_TC_004_065

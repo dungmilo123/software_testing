@@ -1,0 +1,6 @@
+key,value
+base_url,
+add_course,/course/edit.php?category=1
+add_course_return,/course/edit.php?category=1&returnto=catmanage
+search_by_shortname,/course/management.php?search=${Short name}
+search_for_cleanup,/course/management.php?search=${cleanup}

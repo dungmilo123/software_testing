@@ -1,0 +1,11 @@
+tc_id,title,username,password,firstname,lastname,email
+SETUP-01,Create student kt_s01,kt_s01,Kt@12345,Kt,Student01,kt_s01@example.com
+SETUP-02,Create student kt_s02,kt_s02,Kt@12345,Kt,Student02,kt_s02@example.com
+SETUP-03,Create student kt_s03,kt_s03,Kt@12345,Kt,Student03,kt_s03@example.com
+SETUP-04,Create student kt_s04,kt_s04,Kt@12345,Kt,Student04,kt_s04@example.com
+SETUP-05,Create student kt_s05,kt_s05,Kt@12345,Kt,Student05,kt_s05@example.com
+SETUP-06,Create student kt_s06,kt_s06,Kt@12345,Kt,Student06,kt_s06@example.com
+SETUP-07,Create student kt_s07,kt_s07,Kt@12345,Kt,Student07,kt_s07@example.com
+SETUP-08,Create student kt_s08,kt_s08,Kt@12345,Kt,Student08,kt_s08@example.com
+SETUP-09,Create student kt_s09,kt_s09,Kt@12345,Kt,Student09,kt_s09@example.com
+SETUP-10,Create student kt_s10,kt_s10,Kt@12345,Kt,Student10,kt_s10@example.com

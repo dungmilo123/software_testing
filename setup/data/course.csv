@@ -1,0 +1,2 @@
+tc_id,title,fullname,shortname,idnumber,enrol_users,expected_participants
+SETUP-11,Create course KTC01 and enrol kt_s01..kt_s10 as Student,KT Test Course,KTC01,KTC01_ID,kt_s01;kt_s02;kt_s03;kt_s04;kt_s05;kt_s06;kt_s07;kt_s08;kt_s09;kt_s10,11 participants found

@@ -1,0 +1,7 @@
+tc_id,title,status,known_defect,seconds,message,screenshot,data_file,test
+NFR-05-01,Auto-create groups form as first displayed,PASS,,0.45,,,axe_pages.csv,test_nfr05_accessibility.NFR05Accessibility.test_NFR_05_01
+NFR-05-02,Form showing validation errors (empty count),PASS,,3.06,,,axe_pages.csv,test_nfr05_accessibility.NFR05Accessibility.test_NFR_05_02
+NFR-05-03,Form with the preview table,PASS,,1.85,,,axe_pages.csv,test_nfr05_accessibility.NFR05Accessibility.test_NFR_05_03
+NFR-05-04,Groups overview page reached after Create/Cancel,PASS,,0.28,,,axe_pages.csv,test_nfr05_accessibility.NFR05Accessibility.test_NFR_05_04
+NFR-05-05,Preview groups using only the keyboard (Tab / typing / Enter),PASS,,1.32,,,keyboard.csv,test_nfr05_accessibility.NFR05Accessibility.test_NFR_05_05
+NFR-05-06,Validation error reachable and announced with keyboard only,PASS,,1.32,,,keyboard.csv,test_nfr05_accessibility.NFR05Accessibility.test_NFR_05_06

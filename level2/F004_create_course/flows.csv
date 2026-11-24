@@ -1,0 +1,44 @@
+flow,step,keyword,target,value
+create_and_display,1,cleanup,delete_course,${cleanup}
+create_and_display,2,open,add_course,
+create_and_display,3,verify,Form heading,Add a new course
+create_and_display,4,helper,expand_all,
+create_and_display,5,fill,,
+create_and_display,6,submit,Save and display,
+create_and_display,7,verify_expected,,
+create_and_return,1,cleanup,delete_course,${cleanup}
+create_and_return,2,open,add_course_return,
+create_and_return,3,verify,Form heading,Add a new course
+create_and_return,4,helper,expand_all,
+create_and_return,5,fill,,
+create_and_return,6,submit,Save and return,
+create_and_return,7,verify_expected,,
+cancel_form,1,open,add_course,
+cancel_form,2,fill,,
+cancel_form,3,submit,Cancel,
+cancel_form,4,verify,Full name,{{ABSENT}}
+cancel_form,5,open,search_by_shortname,
+cancel_form,6,verify_expected,,
+check_form_only,1,open,add_course,
+check_form_only,2,verify,Form heading,Add a new course
+check_form_only,3,fill,,
+check_form_only,4,verify_expected,,
+error_fix_and_save,1,cleanup,delete_course,${cleanup}
+error_fix_and_save,2,open,add_course,
+error_fix_and_save,3,fill,,
+error_fix_and_save,4,submit,Save and display,
+error_fix_and_save,5,verify_expected,,
+error_fix_and_save,6,set,${fix_element},${fix_value}
+error_fix_and_save,7,submit,Save and display,
+error_fix_and_save,8,verify,Course heading,${expected_after_fix}
+error_then_cancel,1,cleanup,delete_course,${cleanup}
+error_then_cancel,2,open,add_course,
+error_then_cancel,3,fill,,
+error_then_cancel,4,submit,Save and display,
+error_then_cancel,5,verify_expected,,
+error_then_cancel,6,submit,Cancel,
+error_then_cancel,7,open,search_for_cleanup,
+error_then_cancel,8,verify,Search results,{{CONTAINS=${expected_after_fix}}}
+delete_course,1,open,search_for_cleanup,
+delete_course,2,submit_if_present,Course delete link,
+delete_course,3,submit_if_present,Delete confirm button,

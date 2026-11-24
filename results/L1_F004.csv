@@ -1,0 +1,153 @@
+tc_id,title,status,known_defect,seconds,message,screenshot,data_file,test
+TC-004-001,Valid course creation with default settings,PASS,,3.22,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_001
+TC-004-002,Empty course full name,PASS,,3.34,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_002
+TC-004-003,Course full name containing only spaces,FAIL,D-04 whitespace-only full name is accepted,7.02,"Lists differ: [] != ['still on the course form: element not pr[83 chars] ''""]
+
+Second list contains 2 additional elements.
+First extra element 0:
+'still on the course form: element not present (id=id_fullname)'
+
+- []
++ ['still on the course form: element not present (id=id_fullname)',
++  ""error under 'fullname': expected 'Missing full name', got ''""]",results/screenshots/test_TC_004_003.png,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_003
+TC-004-004,Empty course short name,PASS,,3.11,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_004
+TC-004-005,Course short name containing only spaces,FAIL,D-05 whitespace-only short name is accepted,7.16,"Lists differ: [] != ['still on the course form: element not pr[85 chars] ''""]
+
+Second list contains 2 additional elements.
+First extra element 0:
+'still on the course form: element not present (id=id_fullname)'
+
+- []
++ ['still on the course form: element not present (id=id_fullname)',
++  ""error under 'shortname': expected 'Missing short name', got ''""]",results/screenshots/test_TC_004_005.png,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_005
+TC-004-006,Duplicate course short name,PASS,,2.06,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_006
+TC-004-007,Course visibility set to Hide,PASS,,5.74,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_007
+TC-004-008,Course end date enabled and greater than start date,PASS,,3.16,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_008
+TC-004-009,Course end date equal to start date,FAIL,,7.34,"Lists differ: [] != ['still on the course form: element not pr[114 chars] ''""]
+
+Second list contains 2 additional elements.
+First extra element 0:
+'still on the course form: element not present (id=id_fullname)'
+
+- []
++ ['still on the course form: element not present (id=id_fullname)',
++  ""error under 'enddate': expected 'The course end date must be after the start ""
++  ""date.', got ''""]",results/screenshots/test_TC_004_009.png,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_009
+TC-004-010,Course end date earlier than start date,PASS,,2.38,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_010
+TC-004-011,Unique course ID number provided,PASS,,4.56,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_011
+TC-004-012,Duplicate course ID number,PASS,,2.33,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_012
+TC-004-013,Course format set to Weekly format,ERROR,,1.62,"ElementNotInteractableException: Message: element not interactable: Element is not currently visible and may not be manipulated
+  (Session info: chrome=156.0.8078.79); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+#0 0x583932c310aa <unknown>
+#1 0x583932564875 <unknown>
+#2 0x5839325694e2 <unknown>
+#3 0x58393256bcea <unknown>
+#4 0x58393256bdb3 <unknown>
+#5 0x5839325a79bc <unknown>
+#6 0x5839325a9c52 <unknown>
+#7 0x58393259f2c2 <unknown>
+#8 0x58393259e3c3 <unknown>
+#9 0x58393259e369 <unknown>
+#10 0x5839325e3143 <unknown>
+#11 0x5839325e2a51 <unknown>
+#12 0x58393259da07 <unknown>
+#13 0x58393259cd1e <unknown>
+#14 0x58393259d7f1 <unknown>
+#15 0x583932bf3c5c <unknown>
+#16 0x583932bf2475 <unknown>
+#17 0x583932bdd7f8 <unknown>
+#18 0x583932bf30ca <unknown>
+#19 0x583932bc63f9 <unknown>
+#20 0x583932c1b848 <unknown>
+#21 0x583932c1b9e5 <unknown>
+#22 0x583932c2fa43 <unknown>
+#23 0x75e7a1a9caa4 <unknown>
+#24 0x75e7a1b29c6c <unknown>",results/screenshots/test_TC_004_013.png,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_013
+TC-004-014,Course format options offered (Social format not available),PASS,,0.39,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_014
+TC-004-015,Course format set to Single activity format,ERROR,,1.63,"ElementNotInteractableException: Message: element not interactable: Element is not currently visible and may not be manipulated
+  (Session info: chrome=156.0.8078.79); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+#0 0x583932c310aa <unknown>
+#1 0x583932564875 <unknown>
+#2 0x5839325694e2 <unknown>
+#3 0x58393256bcea <unknown>
+#4 0x58393256bdb3 <unknown>
+#5 0x5839325a79bc <unknown>
+#6 0x5839325a9c52 <unknown>
+#7 0x58393259f2c2 <unknown>
+#8 0x58393259e3c3 <unknown>
+#9 0x58393259e369 <unknown>
+#10 0x5839325e3143 <unknown>
+#11 0x5839325e2a51 <unknown>
+#12 0x58393259da07 <unknown>
+#13 0x58393259cd1e <unknown>
+#14 0x58393259d7f1 <unknown>
+#15 0x583932bf3c5c <unknown>
+#16 0x583932bf2475 <unknown>
+#17 0x583932bdd7f8 <unknown>
+#18 0x583932bf30ca <unknown>
+#19 0x583932bc63f9 <unknown>
+#20 0x583932c1b848 <unknown>
+#21 0x583932c1b9e5 <unknown>
+#22 0x583932c2fa43 <unknown>
+#23 0x75e7a1a9caa4 <unknown>
+#24 0x75e7a1b29c6c <unknown>",results/screenshots/test_TC_004_015.png,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_015
+TC-004-016,Number of announcements set to 0,PASS,,5.53,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_016
+TC-004-017,Number of announcements set to 10,PASS,,5.47,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_017
+TC-004-018,Show gradebook to students set to No,PASS,,5.56,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_018
+TC-004-019,Show activity reports set to Yes,PASS,,5.71,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_019
+TC-004-020,Show activity dates set to No,PASS,,5.75,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_020
+TC-004-021,Enable completion tracking set to No,PASS,,5.73,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_021
+TC-004-022,Group mode set to Separate groups,PASS,,5.54,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_022
+TC-004-023,Group mode set to Visible groups,PASS,,5.6,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_023
+TC-004-024,Force group mode set to Yes,PASS,,5.84,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_024
+TC-004-025,Valid course summary entered in summary editor,PASS,,4.45,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_025
+TC-004-026,Course full name length = 1 character (min),PASS,,3.16,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_026
+TC-004-027,Course full name length = 2 characters (min+1),PASS,,3.12,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_027
+TC-004-028,Course full name length = 50 characters (nominal),PASS,,3.3,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_028
+TC-004-029,Course full name length = 1332 characters (max-1),PASS,,2.86,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_029
+TC-004-030,Course full name length = 1333 characters (max),PASS,,2.83,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_030
+TC-004-031,Course full name length = 1334 characters (max+1),PASS,,1.24,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_031
+TC-004-032,Course short name length = 1 character (min),PASS,,3.47,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_032
+TC-004-033,Course short name length = 2 characters (min+1),PASS,,2.98,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_033
+TC-004-034,Course short name length = 10 characters (nominal),PASS,,2.96,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_034
+TC-004-035,Course short name length = 254 characters (max-1),PASS,,3.1,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_035
+TC-004-036,Course short name length = 255 characters (max),PASS,,3.17,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_036
+TC-004-037,Course short name length = 256 characters (max+1),PASS,,0.89,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_037
+TC-004-038,Course ID number length = 1 character (min+1),PASS,,4.48,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_038
+TC-004-039,Course ID number length = 15 characters (nominal),PASS,,4.5,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_039
+TC-004-040,Course ID number length = 99 characters (max-1),PASS,,4.53,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_040
+TC-004-041,Course ID number length = 100 characters (max),PASS,,4.87,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_041
+TC-004-042,Course ID number length = 101 characters (max+1),PASS,,0.5,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_042
+TC-004-043,Number of announcements = 1 (min+1),PASS,,5.43,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_043
+TC-004-044,Number of announcements = 9 (max-1),PASS,,5.8,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_044
+TC-004-045,Course end date = Start date - 1 day (date min-1),PASS,,2.41,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_045
+TC-004-046,Course end date = Start date + 1 minute (date min+1),PASS,,3.5,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_046
+TC-004-047,DT-R2: Save and return with valid inputs,PASS,,3.2,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_047
+TC-004-048,DT-R3: Cancel button clicked on initial form,PASS,,2.29,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_048
+TC-004-049,DT-R6: Both full name and short name missing,PASS,,3.11,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_049
+TC-004-050,DT-R10: Duplicate short name and duplicate ID number,PASS,,2.22,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_050
+TC-004-051,DT-R11: Duplicate short name and end date earlier than start date,PASS,,2.14,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_051
+TC-004-052,DT-R12: Missing full name and duplicate short name,PASS,,3.19,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_052
+TC-004-053,"DT-R13: Full name, unique short name, unique ID, valid end date, Save and return",PASS,,4.7,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_053
+TC-004-054,DT-R14: Valid inputs entered then Cancel clicked,PASS,,2.16,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_054
+TC-004-055,DT-R15: All optional fields filled then Cancel clicked,PASS,,2.24,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_055
+TC-004-056,DT-R16: Save and return with Course visibility set to Hide,PASS,,5.79,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_056
+TC-004-057,DT-R17: Save and return with valid End date enabled,PASS,,3.26,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_057
+TC-004-058,S1: Main success flow - Save and display,PASS,,3.06,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_058
+TC-004-059,S2: Alternative flow A1 - Save and return,PASS,,3.17,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_059
+TC-004-060,S3: Alternative flow A2 - Correct invalid input and save,PASS,,5.69,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_060
+TC-004-061,S4: Alternative flow A3 - Cancel course creation,PASS,,2.19,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_061
+TC-004-062,S5: Alternative flow A4 - Course with valid end date,PASS,,3.27,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_062
+TC-004-063,S6: Alternative flow A5 - Course visibility set to Hidden,PASS,,5.92,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_063
+TC-004-064,"S7: Exception flow E3 - Duplicate short name, then cancel",FAIL,,3.65,"Lists differ: [] != [""course search after Cancel: 'No courses [59 chars]rs)""]
+
+Second list contains 1 additional elements.
+First extra element 0:
+""course search after Cancel: 'No courses were found' not found in 'Back Search courses '... (251 chars)""
+
+- []
++ [""course search after Cancel: 'No courses were found' not found in 'Back ""
++  ""Search courses '... (251 chars)""]",results/screenshots/test_TC_004_064.png,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_064
+TC-004-065,"S8: Exception flow E5 - End date earlier than start date, correct and save",PASS,,4.84,,,create_course.csv,test_f004_create_course.F004CreateCourse.test_TC_004_065
