@@ -1,4 +1,0 @@
-tc_id,title,viewport_name,width,height,quiz_name,expected_result
-NFR-01b-01,Desktop responsive layout and form usability (1366x900),desktop,1366,900,Quiz NFR Usability Desktop,No horizontal overflow; key controls visible; validation & save work
-NFR-01b-02,Tablet responsive layout and form usability (768x1024),tablet,768,1024,Quiz NFR Usability Tablet,No horizontal overflow; key controls visible; validation & save work
-NFR-01b-03,Mobile responsive layout and form usability (375x812),mobile,375,812,Quiz NFR Usability Mobile,No horizontal overflow; key controls visible; validation & save work

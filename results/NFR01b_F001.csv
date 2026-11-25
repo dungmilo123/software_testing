@@ -1,4 +1,0 @@
-tc_id,title,status,known_defect,seconds,message,screenshot,data_file,test
-NFR-01b-01,Desktop responsive layout and form usability (1366x900),PASS,,8.32,,,responsive.csv,test_nfr01b_usability.NFR01bQuizUsability.test_NFR_01b_01
-NFR-01b-02,Tablet responsive layout and form usability (768x1024),PASS,,7.87,,,responsive.csv,test_nfr01b_usability.NFR01bQuizUsability.test_NFR_01b_02
-NFR-01b-03,Mobile responsive layout and form usability (375x812),PASS,,7.57,,,responsive.csv,test_nfr01b_usability.NFR01bQuizUsability.test_NFR_01b_03

@@ -79,9 +79,9 @@ All 6 defects discovered in Project #2 were reproduced identically in both Level
 
 ## 5. Non-Functional Testing (`nonfunctional/`)
 
-Two distinct non-functional suites were implemented and executed for Feature 001 to satisfy both the group assignment (`NFR-01` Performance) and the Project #3 specification requirement of at least two NFRs per student (`NFR-01b` Usability / Responsive Layout).
+One non-functional suite was implemented and executed for Feature 001, as assigned by the group: `NFR-01` Performance.
 
-### 5.1 NFR-01: Performance Testing (`nonfunctional/NFR-01_F001_performance/`)
+### NFR-01: Performance Testing (`nonfunctional/NFR-01_F001_performance/`)
 - **Testing Type:** Non-functional — Response-time performance testing.
 - **Requirement:** Opening **New Quiz** and submitting **Save and display** must achieve `average < 2.0 s` and `95th percentile < 3.0 s`.
 - **Testing Approach & Tool:** Data-driven Selenium timing harness (`test_nfr01_performance.py` + `data/performance.csv`) using Python `time.perf_counter()` for end-to-end transition latency (from navigation/submit click until `document.readyState == 'complete'` and target element visibility, using direct JS click + 50 ms polling on `Save and display` so Selenium's native `ElementClickInterceptedException` retry overhead of ~`1.15 s` does not skew server latency) plus Chrome `performance.getEntriesByType('navigation')[0]` telemetry. Each scenario runs **1 warm-up** iteration (discarded) followed by **10 measured iterations**. Detailed sample telemetry is exported to `results/NFR-01_perf_<tc_id>.json`.
@@ -95,21 +95,6 @@ Two distinct non-functional suites were implemented and executed for Feature 001
 | `NFR-01-03` | `Save and display` | full (Timing + Grade + Layout + SEB + Feedback) | 0.949 | **1.387** | **1.852** | 1.852 | avg < 2.0s, p95 < 3.0s | **PASS** |
 
 - **Analysis:** All three scenarios meet both thresholds (`avg < 2.0 s` and `p95 < 3.0 s`). Opening **New Quiz** averages `0.741 s` (`p95 = 1.000 s`), while **Save and display** (which executes a full HTTP `POST /course/modedit.php` -> `303` redirect -> `GET /mod/quiz/view.php` cycle, `redirectCount = 1`) averages `1.272 s` (`p95 = 1.626 s`) for minimal settings and `1.387 s` (`p95 = 1.852 s`) for a full configuration. Notice that an initial run wrapping `common/moodle.py`'s `m.submit()` had reported `avg ~ 2.35–2.38 s` only because Moodle's sticky footer intercepted native WebDriver clicks on `id_submitbutton` and triggered a ~`1.15 s` ChromeDriver retry before falling back to JS click; removing that client-side click-retry overhead aligns the measured wall-clock time with Chrome's `Navigation Timing` (`loadEventEnd` `0.75–1.77 s`).
-
-### 5.2 NFR-01b: Usability & Responsive Layout Testing (`nonfunctional/NFR-01b_F001_usability/`)
-- **Testing Type:** Non-functional — Usability / Responsive Layout testing.
-- **Requirement:** Across Desktop (`1366x900`), Tablet (`768x1024`), and Mobile (`375x812`), both the **New Quiz** form and saved **Quiz view** page must render with `0 px` horizontal overflow (`scrollWidth <= clientWidth`), keep essential controls (`id_name`, `id_submitbutton`, `id_submitbutton2`, `id_cancel`) visible within the viewport, display inline validation errors on empty submit, and save cleanly.
-- **Testing Approach & Tool:** Data-driven multi-viewport Selenium test (`test_nfr01b_usability.py` + `data/responsive.csv`) using Chrome DevTools Protocol `Emulation.setDeviceMetricsOverride` (avoiding Windows desktop minimum-width window clamping at `375 px`) and DOM bounding-box/overflow inspection. Detailed geometry metrics are saved to `results/NFR-01b_usability_<tc_id>.json`.
-- **Command:** `.venv\Scripts\python.exe run_tests.py nonfunctional/NFR-01b_F001_usability --tag NFR01b_F001`
-- **Measured Results (`results/NFR01b_F001.json`):**
-
-| Case ID | Viewport | Form `scrollWidth / clientWidth` | Form Overflow | `id_name` Width | View `scrollWidth / clientWidth` | View Overflow | Verdict |
-|---|---|---:|---:|---:|---:|---:|---|
-| `NFR-01b-01` | Desktop (`1366x900`) | `1351 / 1351` | `0 px` | `506 px` | `1366 / 1366` | `0 px` | **PASS** |
-| `NFR-01b-02` | Tablet (`768x1024`) | `753 / 753` | `0 px` | `452 px` | `768 / 768` | `0 px` | **PASS** |
-| `NFR-01b-03` | Mobile (`375x812`) | `375 / 375` | `0 px` | `329 px` | `375 / 375` | `0 px` | **PASS** |
-
-- **Observation:** At `375x812` mobile width, Moodle's Bootstrap layout cleanly shrinks `id_name` (`329 px`) and wraps `Save and display` (`left: 23, right: 159`) and `Cancel` (`left: 163, right: 233`) onto a second row below `Save and return to course` (`left: 23, right: 219`), keeping horizontal overflow at `0 px` on both the form and the saved quiz view.
 
 ---
 
