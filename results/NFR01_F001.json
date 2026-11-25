@@ -1,0 +1,49 @@
+{
+ "tag": "NFR01_F001",
+ "base_url": "http://127.0.0.1:9501",
+ "browser": "chrome",
+ "started": "2026-11-25 16:57:43",
+ "seconds": 136.7,
+ "total": 3,
+ "passed": 3,
+ "failed": 0,
+ "errors": 0,
+ "failed_known_defect": [],
+ "failed_unexpected": [],
+ "passed_but_marked_defect": [],
+ "cases": [
+  {
+   "test": "test_nfr01_performance.NFR01QuizPerformance.test_NFR_01_01",
+   "tc_id": "NFR-01-01",
+   "title": "Response time to open New Quiz settings form",
+   "data_file": "performance.csv",
+   "status": "PASS",
+   "known_defect": "",
+   "seconds": 13.54,
+   "message": "",
+   "screenshot": ""
+  },
+  {
+   "test": "test_nfr01_performance.NFR01QuizPerformance.test_NFR_01_02",
+   "tc_id": "NFR-01-02",
+   "title": "Response time for Save and display (minimal quiz)",
+   "data_file": "performance.csv",
+   "status": "PASS",
+   "known_defect": "",
+   "seconds": 32.37,
+   "message": "",
+   "screenshot": ""
+  },
+  {
+   "test": "test_nfr01_performance.NFR01QuizPerformance.test_NFR_01_03",
+   "tc_id": "NFR-01-03",
+   "title": "Response time for Save and display (full configuration)",
+   "data_file": "performance.csv",
+   "status": "PASS",
+   "known_defect": "",
+   "seconds": 83.97,
+   "message": "",
+   "screenshot": ""
+  }
+ ]
+}

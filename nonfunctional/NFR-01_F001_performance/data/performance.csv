@@ -1,0 +1,4 @@
+tc_id,title,operation,quiz_config,warmup,iterations,max_avg_s,max_p95_s,expected_result
+NFR-01-01,Response time to open New Quiz settings form,open_new_quiz,default,1,10,2.0,3.0,avg < 2.0 s and p95 < 3.0 s
+NFR-01-02,Response time for Save and display (minimal quiz),save_and_display,minimal,1,10,2.0,3.0,avg < 2.0 s and p95 < 3.0 s
+NFR-01-03,Response time for Save and display (full configuration),save_and_display,full,1,10,2.0,3.0,avg < 2.0 s and p95 < 3.0 s

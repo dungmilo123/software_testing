@@ -1,0 +1,111 @@
+flow,step,keyword,target,value
+before_all,1,call,delete_quizzes,
+after_all,1,call,delete_quizzes,
+delete_quizzes,1,helper,delete_activities,quiz
+open_form,1,helper,open_new_quiz,
+open_form,2,verify,Form heading,New Quiz
+create_return,1,cleanup,delete_quizzes,
+create_return,2,call,open_form,
+create_return,3,fill,,
+create_return,4,helper,set_password,id_quizpassword;${Require password}
+create_return,5,submit,Save and return,
+create_return,6,open,course_page,
+create_return,7,verify_expected,,
+create_display,1,cleanup,delete_quizzes,
+create_display,2,call,open_form,
+create_display,3,fill,,
+create_display,4,helper,set_password,id_quizpassword;${Require password}
+create_display,5,submit,Save and display,
+create_display,6,verify_expected,,
+create_seb_manual,1,cleanup,delete_quizzes,
+create_seb_manual,2,call,open_form,
+create_seb_manual,3,fill,,
+create_seb_manual,4,helper,set_password,id_seb_quitpassword;${SEB quit password}
+create_seb_manual,5,submit,Save and return,
+create_seb_manual,6,open,course_page,
+create_seb_manual,7,verify_expected,,
+validation_error,1,cleanup,delete_quizzes,
+validation_error,2,call,open_form,
+validation_error,3,fill,,
+validation_error,4,helper,set_password,id_quizpassword;${Require password}
+validation_error,5,submit,Save and return,
+validation_error,6,verify_expected,,
+add_feedback_error,1,cleanup,delete_quizzes,
+add_feedback_error,2,call,open_form,
+add_feedback_error,3,set,Name,${Name}
+add_feedback_error,4,submit,Add feedback fields,
+add_feedback_error,5,helper,expand_form_sections,
+add_feedback_error,6,set,Feedback boundary 0,${Feedback boundary 0}
+add_feedback_error,7,set,Feedback boundary 1,${Feedback boundary 1}
+add_feedback_error,8,submit,Save and return,
+add_feedback_error,9,verify_expected,,
+add_feedback_save,1,cleanup,delete_quizzes,
+add_feedback_save,2,call,open_form,
+add_feedback_save,3,set,Name,${Name}
+add_feedback_save,4,submit,Add feedback fields,
+add_feedback_save,5,helper,expand_form_sections,
+add_feedback_save,6,set,Feedback boundary 0,${Feedback boundary 0}
+add_feedback_save,7,set,Feedback boundary 1,${Feedback boundary 1}
+add_feedback_save,8,submit,Save and return,
+add_feedback_save,9,open,course_page,
+add_feedback_save,10,verify_expected,,
+ui_dt1_after_close,1,call,open_form,
+ui_dt1_after_close,2,verify,Attempt closed,{{DISABLED}}
+ui_dt1_after_close,3,set,Close the quiz,${Close the quiz}
+ui_dt1_after_close,4,verify,Attempt closed,{{ENABLED}}
+ui_dt1_after_close,5,submit,Cancel,
+ui_dt2_attempts_1,1,call,open_form,
+ui_dt2_attempts_1,2,set,Attempts allowed,${Attempts allowed}
+ui_dt2_attempts_1,3,helper,verify_hidden,id=fitem_id_grademethod
+ui_dt2_attempts_1,4,helper,verify_hidden,id=fitem_id_attemptonlast
+ui_dt2_attempts_1,5,helper,verify_hidden,id=fitem_id_delay1
+ui_dt2_attempts_1,6,helper,verify_hidden,id=fitem_id_delay2
+ui_dt2_attempts_1,7,submit,Cancel,
+ui_dt2_attempts_2,1,call,open_form,
+ui_dt2_attempts_2,2,set,Attempts allowed,${Attempts allowed}
+ui_dt2_attempts_2,3,helper,verify_visible,id=fitem_id_grademethod
+ui_dt2_attempts_2,4,helper,verify_visible,id=fitem_id_delay1
+ui_dt2_attempts_2,5,helper,verify_hidden,id=fitem_id_delay2
+ui_dt2_attempts_2,6,submit,Cancel,
+ui_dt3_behaviour,1,call,open_form,
+ui_dt3_behaviour,2,helper,verify_hidden,id=fitem_id_canredoquestions
+ui_dt3_behaviour,3,verify,Correctness during,{{DISABLED}}
+ui_dt3_behaviour,4,set,How questions behave,${How questions behave}
+ui_dt3_behaviour,5,helper,verify_visible,id=fitem_id_canredoquestions
+ui_dt3_behaviour,6,verify,Correctness during,{{ENABLED}}
+ui_dt3_behaviour,7,set,Max marks during,${Max marks during}
+ui_dt3_behaviour,8,verify,Marks during,{{DISABLED}}
+ui_dt3_behaviour,9,submit,Cancel,
+uc_cancel,1,call,open_form,
+uc_cancel,2,fill,,
+uc_cancel,3,submit,Cancel,
+uc_cancel,4,verify_expected,,
+uc_edit_repaginate,1,cleanup,delete_quizzes,
+uc_edit_repaginate,2,call,open_form,
+uc_edit_repaginate,3,fill,,
+uc_edit_repaginate,4,submit,Save and display,
+uc_edit_repaginate,5,verify_expected,,
+uc_edit_repaginate,6,submit,Edit settings link,
+uc_edit_repaginate,7,verify,Repaginate now,{{PRESENT}}
+uc_edit_repaginate,8,helper,expand_form_sections,
+uc_edit_repaginate,9,set,Name,${then_name}
+uc_edit_repaginate,10,set,New page,${then_new_page}
+uc_edit_repaginate,11,set,Repaginate now,${then_repaginate}
+uc_edit_repaginate,12,submit,Save and display,
+uc_edit_repaginate,13,verify,Page heading,${then_expected}
+uc_error_fix_save,1,cleanup,delete_quizzes,
+uc_error_fix_save,2,call,open_form,
+uc_error_fix_save,3,fill,,
+uc_error_fix_save,4,submit,Save and display,
+uc_error_fix_save,5,verify_expected,,
+uc_error_fix_save,6,set,Grade to pass,${then_gradepass}
+uc_error_fix_save,7,submit,Save and display,
+uc_error_fix_save,8,verify,Page heading,${then_expected}
+uc_error_cancel,1,cleanup,delete_quizzes,
+uc_error_cancel,2,call,open_form,
+uc_error_cancel,3,fill,,
+uc_error_cancel,4,submit,Save and return,
+uc_error_cancel,5,verify_expected,,
+uc_error_cancel,6,submit,Cancel,
+uc_error_cancel,7,verify,Page heading,${then_expected}
+uc_error_cancel,8,verify,Quiz activity,{{ABSENT}}

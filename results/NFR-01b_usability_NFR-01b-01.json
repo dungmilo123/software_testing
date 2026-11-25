@@ -1,0 +1,44 @@
+{
+  "tc_id": "NFR-01b-01",
+  "viewport": {
+    "name": "desktop",
+    "width": 1366,
+    "height": 900
+  },
+  "form_layout": {
+    "clientWidth": 1351,
+    "overflowPx": 0,
+    "scrollWidth": 1351
+  },
+  "controls": {
+    "id_name": {
+      "height": 37,
+      "left": 612,
+      "right": 1118,
+      "width": 506
+    },
+    "id_submitbutton": {
+      "height": 37,
+      "left": 812,
+      "right": 948,
+      "width": 136
+    },
+    "id_submitbutton2": {
+      "height": 37,
+      "left": 612,
+      "right": 808,
+      "width": 196
+    },
+    "id_cancel": {
+      "height": 37,
+      "left": 952,
+      "right": 1022,
+      "width": 70
+    }
+  },
+  "view_layout": {
+    "clientWidth": 1366,
+    "overflowPx": 0,
+    "scrollWidth": 1366
+  }
+}

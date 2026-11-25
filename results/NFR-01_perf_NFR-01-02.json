@@ -1,0 +1,102 @@
+{
+  "tc_id": "NFR-01-02",
+  "title": "Response time for Save and display (minimal quiz)",
+  "operation": "save_and_display",
+  "quiz_config": "minimal",
+  "warmup": 1,
+  "iterations": 10,
+  "thresholds_s": {
+    "avg": 2.0,
+    "p95": 3.0
+  },
+  "summary_s": {
+    "min": 0.8066,
+    "avg": 1.2715,
+    "p95": 1.6262,
+    "max": 1.6262
+  },
+  "samples_s": [
+    0.9141,
+    1.6262,
+    1.4027,
+    0.8066,
+    1.4421,
+    1.3247,
+    1.3953,
+    0.9237,
+    1.3757,
+    1.5035
+  ],
+  "navigation_timing_ms": [
+    {
+      "domContentLoaded": 775,
+      "loadEventEnd": 783,
+      "redirectCount": 1,
+      "redirectEnd": 455,
+      "responseEnd": 744
+    },
+    {
+      "domContentLoaded": 1437,
+      "loadEventEnd": 1445,
+      "redirectCount": 1,
+      "redirectEnd": 1058,
+      "responseEnd": 1401
+    },
+    {
+      "domContentLoaded": 1345,
+      "loadEventEnd": 1350,
+      "redirectCount": 1,
+      "redirectEnd": 1032,
+      "responseEnd": 1318
+    },
+    {
+      "domContentLoaded": 748,
+      "loadEventEnd": 752,
+      "redirectCount": 1,
+      "redirectEnd": 437,
+      "responseEnd": 722
+    },
+    {
+      "domContentLoaded": 1371,
+      "loadEventEnd": 1377,
+      "redirectCount": 1,
+      "redirectEnd": 1041,
+      "responseEnd": 1341
+    },
+    {
+      "domContentLoaded": 1264,
+      "loadEventEnd": 1269,
+      "redirectCount": 1,
+      "redirectEnd": 951,
+      "responseEnd": 1239
+    },
+    {
+      "domContentLoaded": 1262,
+      "loadEventEnd": 1269,
+      "redirectCount": 1,
+      "redirectEnd": 949,
+      "responseEnd": 1229
+    },
+    {
+      "domContentLoaded": 798,
+      "loadEventEnd": 805,
+      "redirectCount": 1,
+      "redirectEnd": 460,
+      "responseEnd": 766
+    },
+    {
+      "domContentLoaded": 1313,
+      "loadEventEnd": 1318,
+      "redirectCount": 1,
+      "redirectEnd": 1006,
+      "responseEnd": 1288
+    },
+    {
+      "domContentLoaded": 1355,
+      "loadEventEnd": 1365,
+      "redirectCount": 1,
+      "redirectEnd": 1033,
+      "responseEnd": 1323
+    }
+  ]
+}
