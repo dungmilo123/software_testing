@@ -1,0 +1,5 @@
+tc_id,title,technique,init_check,step1_set,step1_check,step2_set,step2_check,known_defect
+TC-001-069,DT1: After-close review options depend on Close date,DT,disabled=id_attemptclosed,timeclose=2027-11-20 17:00,enabled=id_attemptclosed,,,
+TC-001-072,DT2: Attempts = 1 hides multi-attempt fields,DT,,attempts=1,not_visible=fitem_id_grademethod | not_visible=fitem_id_attemptonlast | not_visible=fitem_id_delay1 | not_visible=fitem_id_delay2,,,
+TC-001-073,DT2: Attempts = 2 shows delay1 but hides delay2,DT,,attempts=2,visible=fitem_id_grademethod | visible=fitem_id_delay1 | not_visible=fitem_id_delay2,,,
+TC-001-074,DT3: Question behaviour & Review options cross-dependencies,DT,not_visible=fitem_id_canredoquestions | disabled=id_correctnessduring,preferredbehaviour=Immediate feedback,visible=fitem_id_canredoquestions | enabled=id_correctnessduring,maxmarksduring=off,disabled=id_marksduring,

@@ -1,0 +1,4 @@
+tc_id,title,status,known_defect,seconds,message,screenshot,data_file,test
+NFR-01-01,Response time to open New Quiz settings form,PASS,,13.54,,,performance.csv,test_nfr01_performance.NFR01QuizPerformance.test_NFR_01_01
+NFR-01-02,Response time for Save and display (minimal quiz),PASS,,32.37,,,performance.csv,test_nfr01_performance.NFR01QuizPerformance.test_NFR_01_02
+NFR-01-03,Response time for Save and display (full configuration),PASS,,83.97,,,performance.csv,test_nfr01_performance.NFR01QuizPerformance.test_NFR_01_03

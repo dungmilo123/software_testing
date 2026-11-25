@@ -1,0 +1,7 @@
+tc_id,title,technique,scenario,name,timelimit_enabled,timelimit_number,attempts,gradepass,timeopen,timeclose,feedbackboundaries_0,feedbackboundaries_1,expected_result,then_set,then_action,then_expected,known_defect
+TC-001-076,S1: Main flow — Save and display,UC,save_display,Quiz UC 76,on,20,3,,,,,,heading=Quiz UC 76 | region_contains=Attempts allowed: 3 | region_contains=Time limit: 20 mins,,,,
+TC-001-077,S3: Cancel on New Quiz form,UC,cancel,Quiz UC Cancel,,,,,,,,,heading=KT Test Course | no_quiz,,,,
+TC-001-078,S4: Edit existing quiz settings with repaginate,UC,edit_repaginate,Quiz UC 78 Init,,,,,,,,,heading=Quiz UC 78 Init,name=Quiz UC 78 Updated | questionsperpage=Every 2 questions | repaginatenow=on,save_display,heading=Quiz UC 78 Updated,
+TC-001-079,S5: Add 3 more overall feedback fields then Save,UC,add_feedback_save,Quiz UC 79,,,,,,,80%,50%,quiz=Quiz UC 79,,,,
+TC-001-080,S6: Validation error then correct and Save and display,UC,error_fix_save,Quiz UC 80,,,,20,,,,,error.gradepass=The grade to pass can not be greater than the maximum possible grade 10,gradepass=5,save_display,heading=Quiz UC 80,
+TC-001-081,S7: Validation error then Cancel,UC,error_cancel,Quiz UC 81,,,,,2026-11-15 09:00,2026-11-10 09:00,,,error.timeclose=The close date must be after the open date.,,cancel,heading=KT Test Course | no_quiz,

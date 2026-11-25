@@ -1,0 +1,44 @@
+{
+  "tc_id": "NFR-01b-03",
+  "viewport": {
+    "name": "mobile",
+    "width": 375,
+    "height": 812
+  },
+  "form_layout": {
+    "clientWidth": 375,
+    "overflowPx": 0,
+    "scrollWidth": 375
+  },
+  "controls": {
+    "id_name": {
+      "height": 37,
+      "left": 23,
+      "right": 352,
+      "width": 329
+    },
+    "id_submitbutton": {
+      "height": 37,
+      "left": 23,
+      "right": 159,
+      "width": 136
+    },
+    "id_submitbutton2": {
+      "height": 37,
+      "left": 23,
+      "right": 219,
+      "width": 196
+    },
+    "id_cancel": {
+      "height": 37,
+      "left": 163,
+      "right": 233,
+      "width": 70
+    }
+  },
+  "view_layout": {
+    "clientWidth": 375,
+    "overflowPx": 0,
+    "scrollWidth": 375
+  }
+}

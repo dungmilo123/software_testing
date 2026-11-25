@@ -1,0 +1,102 @@
+{
+  "tc_id": "NFR-01-01",
+  "title": "Response time to open New Quiz settings form",
+  "operation": "open_new_quiz",
+  "quiz_config": "default",
+  "warmup": 1,
+  "iterations": 10,
+  "thresholds_s": {
+    "avg": 2.0,
+    "p95": 3.0
+  },
+  "summary_s": {
+    "min": 0.5829,
+    "avg": 0.7409,
+    "p95": 0.9997,
+    "max": 0.9997
+  },
+  "samples_s": [
+    0.5829,
+    0.6127,
+    0.6254,
+    0.646,
+    0.628,
+    0.6428,
+    0.9997,
+    0.7965,
+    0.8903,
+    0.9843
+  ],
+  "navigation_timing_ms": [
+    {
+      "domContentLoaded": 423,
+      "loadEventEnd": 451,
+      "redirectCount": 0,
+      "redirectEnd": 0,
+      "responseEnd": 385
+    },
+    {
+      "domContentLoaded": 400,
+      "loadEventEnd": 429,
+      "redirectCount": 0,
+      "redirectEnd": 0,
+      "responseEnd": 363
+    },
+    {
+      "domContentLoaded": 448,
+      "loadEventEnd": 477,
+      "redirectCount": 0,
+      "redirectEnd": 0,
+      "responseEnd": 407
+    },
+    {
+      "domContentLoaded": 453,
+      "loadEventEnd": 483,
+      "redirectCount": 0,
+      "redirectEnd": 0,
+      "responseEnd": 411
+    },
+    {
+      "domContentLoaded": 442,
+      "loadEventEnd": 479,
+      "redirectCount": 0,
+      "redirectEnd": 0,
+      "responseEnd": 399
+    },
+    {
+      "domContentLoaded": 407,
+      "loadEventEnd": 438,
+      "redirectCount": 0,
+      "redirectEnd": 0,
+      "responseEnd": 363
+    },
+    {
+      "domContentLoaded": 423,
+      "loadEventEnd": 875,
+      "redirectCount": 0,
+      "redirectEnd": 0,
+      "responseEnd": 388
+    },
+    {
+      "domContentLoaded": 394,
+      "loadEventEnd": 434,
+      "redirectCount": 0,
+      "redirectEnd": 0,
+      "responseEnd": 349
+    },
+    {
+      "domContentLoaded": 504,
+      "loadEventEnd": 558,
+      "redirectCount": 0,
+      "redirectEnd": 0,
+      "responseEnd": 469
+    },
+    {
+      "domContentLoaded": 475,
+      "loadEventEnd": 529,
+      "redirectCount": 0,
+      "redirectEnd": 0,
+      "responseEnd": 439
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+tc_id,title,status,known_defect,seconds,message,screenshot,data_file,test
+TC-001-001,Create quiz with valid name and defaults,PASS,,7.5,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_001
+TC-001-002,Empty quiz name (required),PASS,,5.42,,,validation_errors.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_002
+TC-001-003,Spaces-only quiz name,PASS,,4.75,,,validation_errors.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_003
+TC-001-004,Non-empty description and display on course page,PASS,,7.61,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_004
+TC-001-005,Open and close dates enabled with valid order,PASS,,8.45,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_005
+TC-001-006,Close date earlier than open date,PASS,,6.47,,,validation_errors.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_006
+TC-001-007,Time limit enabled with valid duration,PASS,,7.57,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_007
+TC-001-008,Time limit with non-numeric input,FAIL,D-04: PARAM_FLOAT silently coerces 'abc' to 0 and saves quiz without error.,11.8,"Lists differ: [] != ['still on Quiz settings form: element not[95 chars] ''""]
+
+Second list contains 2 additional elements.
+First extra element 0:
+'still on Quiz settings form: element not present (id=id_name)'
+
+- []
++ ['still on Quiz settings form: element not present (id=id_name)',
++  ""error under 'timelimit': expected 'You must enter a number here.', got ''""]",results\screenshots\test_TC_001_008.png,validation_errors.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_008
+TC-001-009,Overdue handling set to grace period,PASS,,6.67,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_009
+TC-001-010,Overdue handling set to autoabandon,PASS,,6.57,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_010
+TC-001-011,Valid numeric Grade to pass,PASS,,6.56,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_011
+TC-001-012,Non-numeric Grade to pass,PASS,,4.81,,,validation_errors.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_012
+TC-001-013,Attempts 3 and Average grade method,PASS,,6.61,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_013
+TC-001-014,Attempts 2 and First attempt grading method,PASS,,6.58,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_014
+TC-001-015,Attempts 5 and Last attempt grading method,PASS,,6.54,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_015
+TC-001-016,Layout all questions on one page and Sequential navigation,PASS,,6.59,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_016
+TC-001-017,"Immediate feedback with shuffle No, redo Yes, attemptonlast Yes",PASS,,6.75,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_017
+TC-001-018,Question behaviour: Adaptive mode,PASS,,6.56,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_018
+TC-001-019,Question behaviour: Adaptive mode (no penalties),PASS,,6.55,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_019
+TC-001-020,Question behaviour: Interactive with multiple tries,PASS,,6.56,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_020
+TC-001-021,Question behaviour: Immediate feedback with CBM,PASS,,6.44,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_021
+TC-001-022,Question behaviour: Deferred feedback with CBM,PASS,,6.73,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_022
+TC-001-023,Customize Review options across all 4 timing columns,PASS,,12.96,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_023
+TC-001-024,"Appearance: Small image, 4 grade decimals, 3 question decimals, blocks Yes",PASS,,7.37,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_024
+TC-001-025,Appearance: Large image,PASS,,7.17,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_025
+TC-001-026,Safe Exam Browser configured manually (valid),PASS,,8.57,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_026
+TC-001-027,SEB manual config with invalid quit link URL,PASS,,6.36,,,validation_errors.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_027
+TC-001-028,SEB upload config without config file,PASS,,6.38,,,validation_errors.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_028
+TC-001-029,SEB client config with valid 64-hex Browser Exam Key,PASS,,8.17,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_029
+TC-001-030,SEB client config with malformed Browser Exam Key,PASS,,5.6,,,validation_errors.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_030
+TC-001-031,SEB client config with duplicate Browser Exam Keys,PASS,,6.03,,,validation_errors.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_031
+TC-001-032,"Extra restrictions: password, IP, delays, popup security",PASS,,11.97,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_032
+TC-001-033,Overall feedback with valid 50% boundary and texts,PASS,,7.61,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_033
+TC-001-034,Overall feedback with non-numeric boundary,FAIL,D-06: Moodle shows out-of-range error instead of format error due to unparenthesized &&/|| and PHP 8 string comparison.,5.27,"Lists differ: [] != [""error under 'feedbackboundaries_0': expe[82 chars]rs)""]
+
+Second list contains 1 additional elements.
+First extra element 0:
+""error under 'feedbackboundaries_0': expected 'Feedback grade bound'... (121 chars), got 'Feedback grade bound'... (107 chars)""
+
+- []
++ [""error under 'feedbackboundaries_0': expected 'Feedback grade bound'... (121 ""
++  ""chars), got 'Feedback grade bound'... (107 chars)""]",results\screenshots\test_TC_001_034.png,validation_errors.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_034
+TC-001-035,Overall feedback boundaries out of descending order,PASS,,10.37,,,validation_errors.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_035
+TC-001-036,Overall feedback with gap in boundaries,PASS,,10.38,,,validation_errors.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_036
+TC-001-037,Overall feedback text filled after empty boundary,PASS,,5.4,,,validation_errors.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_037
+TC-001-038,Quiz name length = 1 (min),PASS,,7.09,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_038
+TC-001-039,Quiz name length = 1332 (max-1),PASS,,7.13,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_039
+TC-001-040,Quiz name length = 1333 (max),PASS,,7.63,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_040
+TC-001-041,Quiz name length = 1334 (max+1),PASS,,5.63,,,validation_errors.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_041
+TC-001-042,Time limit = -1 minute (min-1),PASS,,6.25,,,validation_errors.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_042
+TC-001-043,Time limit enabled with 0 minutes (min),PASS,,7.96,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_043
+TC-001-044,Time limit = 1 second (min+1),PASS,,7.82,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_044
+TC-001-045,Grace period = 60 seconds (min invalid boundary),PASS,,5.31,,,validation_errors.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_045
+TC-001-046,Grace period = 61 seconds (min+1 valid boundary),PASS,,7.4,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_046
+TC-001-047,Grade to pass = -1 (below min),FAIL,D-03: Negative Grade to pass (-1) is silently accepted and saved.,10.85,"Lists differ: [] != ['still on Quiz settings form: element not[68 chars]ss'""]
+
+Second list contains 2 additional elements.
+First extra element 0:
+'still on Quiz settings form: element not present (id=id_name)'
+
+- []
++ ['still on Quiz settings form: element not present (id=id_name)',
++  ""an error message is expected under 'gradepass'""]",results\screenshots\test_TC_001_047.png,validation_errors.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_047
+TC-001-048,Grade to pass = 0 (min),PASS,,7.71,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_048
+TC-001-049,Grade to pass = 10 (max),PASS,,6.78,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_049
+TC-001-050,Grade to pass = 10.01 (max+0.01),PASS,,5.16,,,validation_errors.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_050
+TC-001-051,Attempts allowed = 1 (min finite),PASS,,7.43,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_051
+TC-001-052,Attempts allowed = 10 (max finite),PASS,,7.15,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_052
+TC-001-053,New page = Every 50 questions (max),PASS,,6.77,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_053
+TC-001-054,Decimal places = 0 and question decimals = 0 (min),PASS,,6.62,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_054
+TC-001-055,Decimal places = 5 and question decimals = 7 (max),PASS,,6.58,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_055
+TC-001-056,Require password length = 255 (max),PASS,,7.63,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_056
+TC-001-057,Require password length = 256 (max+1),FAIL,D-01: Unhandled dmlwriteexception 'Error writing to database' (Data too long for column 'password').,12.04,"Lists differ: [] != [""page must not show 'Error writing to dat[121 chars]rd'""]
+
+Second list contains 3 additional elements.
+First extra element 0:
+""page must not show 'Error writing to database'""
+
+- []
++ [""page must not show 'Error writing to database'"",
++  'still on Quiz settings form: element not present (id=id_name)',
++  ""an error message is expected under 'quizpassword'""]",results\screenshots\test_TC_001_057.png,validation_errors.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_057
+TC-001-058,Require network address length = 255 (max),PASS,,6.5,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_058
+TC-001-059,Require network address length = 256 (max+1),FAIL,D-02: Unhandled dmlwriteexception 'Error writing to database' (Data too long for column 'subnet').,10.86,"Lists differ: [] != [""page must not show 'Error writing to dat[115 chars]et'""]
+
+Second list contains 3 additional elements.
+First extra element 0:
+""page must not show 'Error writing to database'""
+
+- []
++ [""page must not show 'Error writing to database'"",
++  'still on Quiz settings form: element not present (id=id_name)',
++  ""an error message is expected under 'subnet'""]",results\screenshots\test_TC_001_059.png,validation_errors.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_059
+TC-001-060,Delay between 1st and 2nd attempts = -1 (min-1),PASS,,5.8,,,validation_errors.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_060
+TC-001-061,Delay between later attempts = -1 (min-1),PASS,,6.2,,,validation_errors.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_061
+TC-001-062,Overall feedback boundary = '0' (literal zero),FAIL,D-05: PHP empty('0') skips the boundary loop in mod_form.php so '0' is silently accepted.,10.83,"Lists differ: [] != ['still on Quiz settings form: element not[112 chars] ''""]
+
+Second list contains 2 additional elements.
+First extra element 0:
+'still on Quiz settings form: element not present (id=id_name)'
+
+- []
++ ['still on Quiz settings form: element not present (id=id_name)',
++  ""error under 'feedbackboundaries_0': expected 'Feedback grade bound'... (107 ""
++  ""chars), got ''""]",results\screenshots\test_TC_001_062.png,validation_errors.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_062
+TC-001-063,Overall feedback boundary = '0%' (lower boundary),PASS,,4.92,,,validation_errors.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_063
+TC-001-064,Overall feedback boundary = '0.01%' (min+step valid),PASS,,6.51,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_064
+TC-001-065,Overall feedback boundary = '99.99%' (max-step valid),PASS,,6.26,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_065
+TC-001-066,Overall feedback boundary = '100%' (upper boundary),PASS,,4.92,,,validation_errors.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_066
+TC-001-067,Overall feedback boundary = '101%' (above max),PASS,,4.95,,,validation_errors.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_067
+TC-001-068,DT1: Equal open and close dates accepted,PASS,,8.4,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_068
+TC-001-069,DT1: After-close review options depend on Close date,PASS,,3.65,,,ui_rules.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_069
+TC-001-070,DT1: Grace period disabled when overdue handling is graceperiod,PASS,,5.91,,,validation_errors.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_070
+TC-001-071,DT1: Grace period negative (-1 day) triggers graceperiodtoosmall,PASS,,5.01,,,validation_errors.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_071
+TC-001-072,DT2: Attempts = 1 hides multi-attempt fields,PASS,,2.27,,,ui_rules.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_072
+TC-001-073,DT2: Attempts = 2 shows delay1 but hides delay2,PASS,,2.2,,,ui_rules.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_073
+TC-001-074,DT3: Question behaviour & Review options cross-dependencies,PASS,,2.28,,,ui_rules.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_074
+TC-001-075,DT2: CBM behaviour allows Grade to pass > 10,PASS,,6.44,,,create_valid.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_075
+TC-001-076,S1: Main flow — Save and display,PASS,,8.11,,,scenarios.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_076
+TC-001-077,S3: Cancel on New Quiz form,PASS,,4.23,,,scenarios.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_077
+TC-001-078,S4: Edit existing quiz settings with repaginate,PASS,,11.06,,,scenarios.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_078
+TC-001-079,S5: Add 3 more overall feedback fields then Save,PASS,,10.43,,,scenarios.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_079
+TC-001-080,S6: Validation error then correct and Save and display,PASS,,8.43,,,scenarios.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_080
+TC-001-081,S7: Validation error then Cancel,PASS,,8.28,,,scenarios.csv,test_f001_quiz_settings.F001QuizSettings.test_TC_001_081
