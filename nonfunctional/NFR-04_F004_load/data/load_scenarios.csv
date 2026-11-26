@@ -1,0 +1,7 @@
+tc_id,title,description,url_path,concurrent_users,expected_result
+NFR-04-01,Single user load - Add course form,One user loads the Add a new course form,/course/edit.php?category=1,1,avg_lt_2s
+NFR-04-02,Five concurrent users - Add course form,Five simultaneous users open the Add a new course form,/course/edit.php?category=1,5,avg_lt_2s
+NFR-04-03,Ten concurrent users - Add course form,Ten simultaneous users open the Add a new course form,/course/edit.php?category=1,10,avg_lt_3s
+NFR-04-04,Single user load - Course management,One user loads the Course management page,/course/management.php,1,avg_lt_2s
+NFR-04-05,Five concurrent users - Course management,Five simultaneous users open the Course management page,/course/management.php,5,avg_lt_2s
+NFR-04-06,Ten concurrent users - Course management,Ten simultaneous users open the Course management page,/course/management.php,10,avg_lt_3s

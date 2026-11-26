@@ -1,0 +1,89 @@
+{
+ "tag": "NFR04_F004",
+ "base_url": "http://127.0.0.1:9501",
+ "browser": "chrome",
+ "started": "2026-11-26 23:26:54",
+ "seconds": 709.8,
+ "total": 6,
+ "passed": 0,
+ "failed": 6,
+ "errors": 0,
+ "failed_known_defect": [],
+ "failed_unexpected": [
+  "NFR-04-01",
+  "NFR-04-02",
+  "NFR-04-03",
+  "NFR-04-04",
+  "NFR-04-05",
+  "NFR-04-06"
+ ],
+ "passed_but_marked_defect": [],
+ "cases": [
+  {
+   "test": "test_nfr04_load.NFR04Load.test_NFR_04_01",
+   "tc_id": "NFR-04-01",
+   "title": "Single user load - Add course form",
+   "data_file": "load_scenarios.csv",
+   "status": "FAIL",
+   "known_defect": "",
+   "seconds": 52.6,
+   "message": "52.51187729999947 not less than or equal to 2.0 : NFR-04-01: average response time 52.512 s exceeds limit 2.0 s (url=/course/edit.php?category=1, users=1)",
+   "screenshot": "results\\screenshots\\test_NFR_04_01.png"
+  },
+  {
+   "test": "test_nfr04_load.NFR04Load.test_NFR_04_02",
+   "tc_id": "NFR-04-02",
+   "title": "Five concurrent users - Add course form",
+   "data_file": "load_scenarios.csv",
+   "status": "FAIL",
+   "known_defect": "",
+   "seconds": 115.92,
+   "message": "84.86946876000002 not less than or equal to 2.0 : NFR-04-02: average response time 84.869 s exceeds limit 2.0 s (url=/course/edit.php?category=1, users=5)",
+   "screenshot": "results\\screenshots\\test_NFR_04_02.png"
+  },
+  {
+   "test": "test_nfr04_load.NFR04Load.test_NFR_04_03",
+   "tc_id": "NFR-04-03",
+   "title": "Ten concurrent users - Add course form",
+   "data_file": "load_scenarios.csv",
+   "status": "FAIL",
+   "known_defect": "",
+   "seconds": 120.09,
+   "message": "0 != 5 : HTTP errors during load: timed out; timed out; timed out; timed out; timed out",
+   "screenshot": "results\\screenshots\\test_NFR_04_03.png"
+  },
+  {
+   "test": "test_nfr04_load.NFR04Load.test_NFR_04_04",
+   "tc_id": "NFR-04-04",
+   "title": "Single user load - Course management",
+   "data_file": "load_scenarios.csv",
+   "status": "FAIL",
+   "known_defect": "",
+   "seconds": 60.12,
+   "message": "0 not greater than 0 : No successful responses recorded",
+   "screenshot": "results\\screenshots\\test_NFR_04_04.png"
+  },
+  {
+   "test": "test_nfr04_load.NFR04Load.test_NFR_04_05",
+   "tc_id": "NFR-04-05",
+   "title": "Five concurrent users - Course management",
+   "data_file": "load_scenarios.csv",
+   "status": "FAIL",
+   "known_defect": "",
+   "seconds": 89.61,
+   "message": "65.30566439999984 not less than or equal to 2.0 : NFR-04-05: average response time 65.306 s exceeds limit 2.0 s (url=/course/management.php, users=5)",
+   "screenshot": "results\\screenshots\\test_NFR_04_05.png"
+  },
+  {
+   "test": "test_nfr04_load.NFR04Load.test_NFR_04_06",
+   "tc_id": "NFR-04-06",
+   "title": "Ten concurrent users - Course management",
+   "data_file": "load_scenarios.csv",
+   "status": "FAIL",
+   "known_defect": "",
+   "seconds": 120.09,
+   "message": "0 != 3 : HTTP errors during load: timed out; timed out; timed out",
+   "screenshot": "results\\screenshots\\test_NFR_04_06.png"
+  }
+ ]
+}
