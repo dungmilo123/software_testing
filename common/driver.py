@@ -13,6 +13,8 @@ def make_driver():
         driver.set_window_size(1400, 1000)
     else:
         opts = webdriver.ChromeOptions()
+        if config.CHROME_BINARY:  # another Chromium browser, e.g. CHROME_BINARY=/usr/bin/brave
+            opts.binary_location = config.CHROME_BINARY
         if config.HEADLESS:
             opts.add_argument("--headless=new")
         opts.add_argument("--window-size=1400,1000")

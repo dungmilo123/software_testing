@@ -1,0 +1,19 @@
+tc_id,title,status,known_defect,seconds,message,screenshot,data_file,test
+NFR-03-01,Not logged in: Gradebook setup,PASS,,2.98,,,access.csv,test_nfr03_access_control.NFR03AccessControl.test_NFR_03_01
+NFR-03-02,Not logged in: New grade item form,PASS,,1.28,,,access.csv,test_nfr03_access_control.NFR03AccessControl.test_NFR_03_02
+NFR-03-03,Not logged in: Edit form of an existing grade item,PASS,,1.3,,,access.csv,test_nfr03_access_control.NFR03AccessControl.test_NFR_03_03
+NFR-03-04,Not logged in: Grader report,PASS,,1.23,,,access.csv,test_nfr03_access_control.NFR03AccessControl.test_NFR_03_04
+NFR-03-05,Not logged in: Single view of the grade item,PASS,,1.19,,,access.csv,test_nfr03_access_control.NFR03AccessControl.test_NFR_03_05
+NFR-03-06,Not logged in: delete link of the grade item,PASS,,4.34,,,access.csv,test_nfr03_access_control.NFR03AccessControl.test_NFR_03_06
+NFR-03-07,Not logged in: forged POST of the Edit form,PASS,,4.92,,,access.csv,test_nfr03_access_control.NFR03AccessControl.test_NFR_03_07
+NFR-03-08,Student: Gradebook setup,PASS,,5.12,,,access.csv,test_nfr03_access_control.NFR03AccessControl.test_NFR_03_08
+NFR-03-09,Student: New grade item form,PASS,,1.07,,,access.csv,test_nfr03_access_control.NFR03AccessControl.test_NFR_03_09
+NFR-03-10,Student: Edit form of an existing grade item,PASS,,1.37,,,access.csv,test_nfr03_access_control.NFR03AccessControl.test_NFR_03_10
+NFR-03-11,Student: New grade category form,PASS,,2.29,,,access.csv,test_nfr03_access_control.NFR03AccessControl.test_NFR_03_11
+NFR-03-12,Student: Grader report,PASS,,2.23,,,access.csv,test_nfr03_access_control.NFR03AccessControl.test_NFR_03_12
+NFR-03-13,Student: Single view of the grade item,PASS,,1.7,,,access.csv,test_nfr03_access_control.NFR03AccessControl.test_NFR_03_13
+NFR-03-14,Student: hide link of the grade item (own valid sesskey),PASS,,6.45,,,access.csv,test_nfr03_access_control.NFR03AccessControl.test_NFR_03_14
+NFR-03-15,Student: delete link of the grade item (own valid sesskey),PASS,,5.06,,,access.csv,test_nfr03_access_control.NFR03AccessControl.test_NFR_03_15
+NFR-03-16,Student: forged POST of the Edit form (own valid sesskey),PASS,,5.11,,,access.csv,test_nfr03_access_control.NFR03AccessControl.test_NFR_03_16
+NFR-03-17,Control: student opens own User report (allowed),PASS,,0.66,,,access.csv,test_nfr03_access_control.NFR03AccessControl.test_NFR_03_17
+NFR-03-18,Control: teacher/admin opens Gradebook setup (allowed),PASS,,0.79,,,access.csv,test_nfr03_access_control.NFR03AccessControl.test_NFR_03_18

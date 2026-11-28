@@ -23,10 +23,13 @@ export MOODLE_BASE_URL=http://127.0.0.1:9501                          # site und
 .venv/bin/python run_tests.py level1/F005_auto_create_groups --tag L1_F005
 .venv/bin/python run_tests.py level2/F005_auto_create_groups --tag L2_F005
 .venv/bin/python run_tests.py nonfunctional/NFR-05_F005_accessibility --tag NFR05_F005
+.venv/bin/python run_tests.py level1/F003_grade_item --tag L1_F003
+.venv/bin/python run_tests.py level2/F003_grade_item --tag L2_F003
+.venv/bin/python run_tests.py nonfunctional/NFR-03_F003_access_control --tag NFR03_F003
 .venv/bin/python run_tests.py setup/test_99_cleanup.py                 # at the very end
 ```
 
-Options: `HEADLESS=0` shows the browser, `BROWSER=firefox`, `-k TC_005_03` runs only matching cases.
+Options: `HEADLESS=0` shows the browser, `BROWSER=firefox`, `CHROME_BINARY=/usr/bin/brave` (another Chromium browser), `-k TC_005_03` runs only matching cases.
 A case listed in the `known_defect` column fails on purpose (it checks the specified behaviour that Moodle
 violates); the runner prints those separately from unexpected failures.
 

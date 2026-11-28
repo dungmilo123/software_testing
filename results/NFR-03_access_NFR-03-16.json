@@ -1,0 +1,22 @@
+{
+ "tc_id": "NFR-03-16",
+ "role": "student",
+ "method": "post",
+ "request": "/grade/edit/tree/item.php",
+ "final_url": "http://127.0.0.1:9501/grade/edit/tree/item.php",
+ "message": "Sorry, but you do not currently have permissions to do that (Manage grade items).",
+ "expected": "denied",
+ "expected_result": "Sorry, but you do not currently have permissions to do that",
+ "item_before": {
+  "exists": true,
+  "name": "NFR03-target",
+  "max": "10.00",
+  "hidden": "false"
+ },
+ "item_after": {
+  "exists": true,
+  "name": "NFR03-target",
+  "max": "10.00",
+  "hidden": "false"
+ }
+}

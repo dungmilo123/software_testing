@@ -1,0 +1,5 @@
+tc_id,title,technique,precondition,form,before_expected,itemname,iteminfo,idnumber,gradetype,scaleid,rescalegrades,grademax,grademin,gradepass,display,decimals,hidden,hiddenuntil_enabled,locked,locktime,weightoverride,aggregationcoef2,aggregationcoef,parentcategory,action,expected_result,then_set,then_action,then_expected,cleanup,known_defect
+TC-003-066,Letter display disables decimal places,DT,,full,enabled.decimals,,,,,,,,,,Letter,,,,,,,,,,none,disabled.decimals | cancel,,,,,
+TC-003-067,Hidden until disables Hidden,ECP/DT,,full,enabled.hidden | disabled.hiddenuntil_day,,,,,,,,,,,,,on,,,,,,,none,enabled.hiddenuntil_day | disabled.hidden | cancel,,,,,
+TC-003-068,Lock after date is saved,ECP,,full,disabled.locktime_day,F003-068,,,,,,,,,,,,,,2030-12-15,,,,,none,enabled.locktime_day,,save,row=F003-068 | edit=F003-068 | checked.locktime_enabled | value.locktime_day=15 | value.locktime_month=12 | value.locktime_year=2030 | cancel,,
+TC-003-075,Weight disabled until Weight adjusted is ticked,ECP/DT,,full,disabled.aggregationcoef2,,,,,,,,,,,,,,,,on,,,,none,enabled.aggregationcoef2 | cancel,,,,,

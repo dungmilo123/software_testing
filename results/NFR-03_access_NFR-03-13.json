@@ -1,0 +1,12 @@
+{
+ "tc_id": "NFR-03-13",
+ "role": "student",
+ "method": "get",
+ "request": "/grade/report/singleview/index.php?id=3&item=grade&itemid=980",
+ "final_url": "http://127.0.0.1:9501/grade/report/singleview/index.php?id=3&item=grade&itemid=980",
+ "message": "Sorry, but you do not currently have permissions to do that (View single view).",
+ "expected": "denied",
+ "expected_result": "Sorry, but you do not currently have permissions to do that (View single view).",
+ "item_before": null,
+ "item_after": null
+}

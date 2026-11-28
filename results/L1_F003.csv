@@ -1,0 +1,127 @@
+tc_id,title,status,known_defect,seconds,message,screenshot,data_file,test
+TC-003-001,Add Value item with defaults,PASS,,19.09,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_001
+TC-003-002,Blank optional name,PASS,,18.41,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_002
+TC-003-003,One-character name,PASS,,18.38,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_003
+TC-003-004,Unicode name,PASS,,18.45,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_004
+TC-003-005,Name length 1332 (max-1),PASS,,18.45,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_005
+TC-003-006,Name length 1333 (max),PASS,,18.38,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_006
+TC-003-007,Name length 1334 (max+1),FAIL,D003-01: 'Error writing to database' instead of a validation message under Item name,8.66,"Lists differ: [] != [""a validation message is expected under '[96 chars]se'""]
+
+Second list contains 2 additional elements.
+First extra element 0:
+""a validation message is expected under 'itemname' (page shows: Error writing to database)""
+
+- []
++ [""a validation message is expected under 'itemname' (page shows: Error writing ""
++  'to database)',
++  ""page must not show 'Error writing to database'""]",results/screenshots/test_TC_003_007.png,add_invalid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_007
+TC-003-008,Nonempty item information,PASS,,18.48,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_008
+TC-003-009,Empty ID number,PASS,,18.51,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_009
+TC-003-010,Unique ID number,PASS,,19.7,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_010
+TC-003-011,ID number length 254 (max-1),PASS,,22.12,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_011
+TC-003-012,ID number length 255 (max),PASS,,18.63,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_012
+TC-003-013,ID number length 256 (max+1),FAIL,D003-02: 'Error writing to database' instead of a validation message under ID number,8.8,"Lists differ: [] != [""a validation message is expected under '[96 chars]se'""]
+
+Second list contains 2 additional elements.
+First extra element 0:
+""a validation message is expected under 'idnumber' (page shows: Error writing to database)""
+
+- []
++ [""a validation message is expected under 'idnumber' (page shows: Error writing ""
++  'to database)',
++  ""page must not show 'Error writing to database'""]",results/screenshots/test_TC_003_013.png,add_invalid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_013
+TC-003-014,Duplicate ID number in the same course,PASS,,22.28,,,add_invalid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_014
+TC-003-015,Scale type without a scale,PASS,,11.05,,,add_invalid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_015
+TC-003-016,Scale type with a scale,PASS,,18.5,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_016
+TC-003-017,Text type,PASS,,18.4,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_017
+TC-003-018,Maximum grade empty,FAIL,D003-03: 'Error writing to database' instead of a validation message under Maximum grade,8.81,"Lists differ: [] != [""a validation message is expected under '[96 chars]se'""]
+
+Second list contains 2 additional elements.
+First extra element 0:
+""a validation message is expected under 'grademax' (page shows: Error writing to database)""
+
+- []
++ [""a validation message is expected under 'grademax' (page shows: Error writing ""
++  'to database)',
++  ""page must not show 'Error writing to database'""]",results/screenshots/test_TC_003_018.png,add_invalid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_018
+TC-003-019,Maximum grade not a number,PASS,,10.99,,,add_invalid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_019
+TC-003-020,Maximum -0.01 with minimum 0 (below min),PASS,,11.14,,,add_invalid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_020
+TC-003-021,Maximum 0 with minimum 0 (equal to min),PASS,,11.24,,,add_invalid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_021
+TC-003-022,Maximum 0.01 with minimum 0 (just above min),PASS,,18.59,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_022
+TC-003-023,Minimum 9.99 with maximum 10 (just below max),PASS,,18.37,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_023
+TC-003-024,Minimum 10 with maximum 10 (equal to max),PASS,,11.13,,,add_invalid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_024
+TC-003-025,Minimum 10.01 with maximum 10 (above max),PASS,,11.2,,,add_invalid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_025
+TC-003-026,Negative range -10 to -5,PASS,,18.67,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_026
+TC-003-027,Minimum grade empty defaults to 0,PASS,,18.54,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_027
+TC-003-028,Minimum grade not a number,PASS,,10.95,,,add_invalid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_028
+TC-003-029,Maximum with five decimals,PASS,,18.58,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_029
+TC-003-030,Maximum with six decimals is rounded to five,PASS,,18.87,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_030
+TC-003-031,Grade to pass 0 (min),PASS,,18.84,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_031
+TC-003-032,Grade to pass 50 (nominal),PASS,,18.78,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_032
+TC-003-033,Grade to pass 100 (max),PASS,,18.63,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_033
+TC-003-034,Grade to pass empty defaults to 0,PASS,,18.61,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_034
+TC-003-035,Grade to pass not a number,PASS,,11.11,,,add_invalid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_035
+TC-003-036,Grade to pass -0.01 (below min),PASS,,18.45,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_036
+TC-003-037,Grade to pass 100.01 (above max),PASS,,19.06,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_037
+TC-003-038,Overall decimal places Default (2),PASS,,18.52,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_038
+TC-003-039,Overall decimal places 0,PASS,,18.42,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_039
+TC-003-040,Overall decimal places 1,PASS,,18.53,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_040
+TC-003-041,Overall decimal places 4,PASS,,19.03,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_041
+TC-003-042,Overall decimal places 5,PASS,,18.58,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_042
+TC-003-043,Grade display type Real,PASS,,18.56,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_043
+TC-003-044,Grade display type Percentage,PASS,,18.83,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_044
+TC-003-045,Grade display type Letter,PASS,,18.86,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_045
+TC-003-046,Grade display type Real (percentage),PASS,,18.57,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_046
+TC-003-047,Grade display type Real (letter),PASS,,18.53,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_047
+TC-003-048,Grade display type Letter (real),PASS,,18.69,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_048
+TC-003-049,Grade display type Letter (percentage),PASS,,18.89,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_049
+TC-003-050,Grade display type Percentage (letter),PASS,,18.59,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_050
+TC-003-051,Grade display type Percentage (real),PASS,,18.58,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_051
+TC-003-052,Hidden item,PASS,,18.74,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_052
+TC-003-053,Locked item,PASS,,18.48,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_053
+TC-003-054,Hidden and locked item,PASS,,19.58,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_054
+TC-003-055,Extra credit ticked,PASS,,19.56,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_055
+TC-003-056,S4: cancel the full Add form,PASS,,9.21,,,scenarios.csv,test_f003_grade_item.F003GradeItem.test_TC_003_056
+TC-003-057,S6: edit the item name,PASS,,18.55,,,scenarios.csv,test_f003_grade_item.F003GradeItem.test_TC_003_057
+TC-003-058,S6: edit the maximum grade (no grades yet),PASS,,18.55,,,scenarios.csv,test_f003_grade_item.F003GradeItem.test_TC_003_058
+TC-003-059,S6: edit item info and ID number,PASS,,24.34,,,scenarios.csv,test_f003_grade_item.F003GradeItem.test_TC_003_059
+TC-003-060,S7: cancel the Edit form,PASS,,18.6,,,scenarios.csv,test_f003_grade_item.F003GradeItem.test_TC_003_060
+TC-003-061,"S5: correct an invalid maximum, then save",PASS,,14.89,,,scenarios.csv,test_f003_grade_item.F003GradeItem.test_TC_003_061
+TC-003-062,"S8: graded item - grade type fixed, rescale choice required",PASS,,25.37,,,scenarios.csv,test_f003_grade_item.F003GradeItem.test_TC_003_062
+TC-003-063,S9: rescale existing grades = Yes,PASS,,25.9,,,scenarios.csv,test_f003_grade_item.F003GradeItem.test_TC_003_063
+TC-003-064,S9: rescale existing grades = No,PASS,,26.0,,,scenarios.csv,test_f003_grade_item.F003GradeItem.test_TC_003_064
+TC-003-065,S3: cancel the quick Add dialog,PASS,,6.06,,,scenarios.csv,test_f003_grade_item.F003GradeItem.test_TC_003_065
+TC-003-066,Letter display disables decimal places,PASS,,9.28,,,form_rules.csv,test_f003_grade_item.F003GradeItem.test_TC_003_066
+TC-003-067,Hidden until disables Hidden,PASS,,10.29,,,form_rules.csv,test_f003_grade_item.F003GradeItem.test_TC_003_067
+TC-003-068,Lock after date is saved,PASS,,20.37,,,form_rules.csv,test_f003_grade_item.F003GradeItem.test_TC_003_068
+TC-003-069,Maximum 99999.99998 (storage max-1),PASS,,18.63,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_069
+TC-003-070,Maximum 99999.99999 (storage max),PASS,,18.95,,,add_valid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_070
+TC-003-071,Maximum 100000 (storage max+1),FAIL,D003-04: 'Error writing to database' instead of a validation message under Maximum grade,9.29,"Lists differ: [] != [""a validation message is expected under '[96 chars]se'""]
+
+Second list contains 2 additional elements.
+First extra element 0:
+""a validation message is expected under 'grademax' (page shows: Error writing to database)""
+
+- []
++ [""a validation message is expected under 'grademax' (page shows: Error writing ""
++  'to database)',
++  ""page must not show 'Error writing to database'""]",results/screenshots/test_TC_003_071.png,add_invalid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_071
+TC-003-072,Adjusted weight 0,PASS,,25.94,,,scenarios.csv,test_f003_grade_item.F003GradeItem.test_TC_003_072
+TC-003-073,Adjusted weight 25,PASS,,26.35,,,scenarios.csv,test_f003_grade_item.F003GradeItem.test_TC_003_073
+TC-003-074,Adjusted weight 100,PASS,,26.2,,,scenarios.csv,test_f003_grade_item.F003GradeItem.test_TC_003_074
+TC-003-075,Weight disabled until Weight adjusted is ticked,PASS,,10.3,,,form_rules.csv,test_f003_grade_item.F003GradeItem.test_TC_003_075
+TC-003-076,Weight not a number,PASS,,12.15,,,add_invalid.csv,test_f003_grade_item.F003GradeItem.test_TC_003_076
+TC-003-077,S10: add an item into another category,PASS,,27.58,,,scenarios.csv,test_f003_grade_item.F003GradeItem.test_TC_003_077
+TC-003-078,Parent category cannot be changed on Edit,PASS,,27.59,,,scenarios.csv,test_f003_grade_item.F003GradeItem.test_TC_003_078
+TC-003-079,S2: add an item with the quick dialog,PASS,,11.02,,,scenarios.csv,test_f003_grade_item.F003GradeItem.test_TC_003_079
+TC-003-080,Second item when the course total is at the storage maximum,FAIL,D003-05: the course total overflows and 'Error writing to database' is shown; the gradebook stays broken until a reset,22.74,"Lists differ: [] != [""page must not show 'Error writing to dat[179 chars]]])""]
+
+Second list contains 2 additional elements.
+First extra element 0:
+""page must not show 'Error writing to database'""
+
+- []
++ [""page must not show 'Error writing to database'"",
++  ""row 'F003-080-small' in Gradebook setup: element not present ""
++  ""(xpath=//tr[@data-itemid][.//span[contains(@class,'gradeitemheader') and ""
++  ""normalize-space(.)='F003-080-small']])""]",results/screenshots/test_TC_003_080.png,scenarios.csv,test_f003_grade_item.F003GradeItem.test_TC_003_080

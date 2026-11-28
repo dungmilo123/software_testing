@@ -1,0 +1,15 @@
+tc_id,title,technique,precondition,form,before_expected,itemname,iteminfo,idnumber,gradetype,scaleid,rescalegrades,grademax,grademin,gradepass,display,decimals,hidden,hiddenuntil_enabled,locked,locktime,weightoverride,aggregationcoef2,aggregationcoef,parentcategory,action,expected_result,then_set,then_action,then_expected,cleanup,known_defect
+TC-003-007,Name length 1334 (max+1),BVA,,full,,{{N*1334}},,,,,,,,,,,,,,,,,,,save,error.itemname=* | no_text=Error writing to database | no_row={{N*1334}},,,,,D003-01: 'Error writing to database' instead of a validation message under Item name
+TC-003-013,ID number length 256 (max+1),BVA,,full,,F003-013,,{{I*256}},,,,,,,,,,,,,,,,,save,error.idnumber=* | no_text=Error writing to database | no_row=F003-013,,,,,D003-02: 'Error writing to database' instead of a validation message under ID number
+TC-003-014,Duplicate ID number in the same course,ECP,item=F003-014-reference;10;F003-dup,full,,F003-014,,F003-dup,,,,,,,,,,,,,,,,,save,error.idnumber=This ID number is already taken | cancel | no_row=F003-014,,,,,
+TC-003-015,Scale type without a scale,ECP/DT,,full,,F003-015,,,Scale,,,,,,,,,,,,,,,,save,error.scaleid=Scale must be selected | cancel | no_row=F003-015,,,,,
+TC-003-018,Maximum grade empty,ECP,,full,,F003-018,,,,,,{{EMPTY}},,,,,,,,,,,,,save,error.grademax=* | no_text=Error writing to database | no_row=F003-018,,,,,D003-03: 'Error writing to database' instead of a validation message under Maximum grade
+TC-003-019,Maximum grade not a number,ECP,,full,,F003-019,,,,,,abc,,,,,,,,,,,,,save,error.grademax=You must enter a number here. | cancel | no_row=F003-019,,,,,
+TC-003-020,Maximum -0.01 with minimum 0 (below min),BVA/DT,,full,,F003-020,,,,,,-0.01,0,,,,,,,,,,,,save,error.grademax=The minimum must be lower than the maximum | cancel | no_row=F003-020,,,,,
+TC-003-021,Maximum 0 with minimum 0 (equal to min),BVA/DT,,full,,F003-021,,,,,,0,0,,,,,,,,,,,,save,error.grademax=The minimum must be lower than the maximum | cancel | no_row=F003-021,,,,,
+TC-003-024,Minimum 10 with maximum 10 (equal to max),BVA/DT,,full,,F003-024,,,,,,10,10,,,,,,,,,,,,save,error.grademin=The minimum must be lower than the maximum | cancel | no_row=F003-024,,,,,
+TC-003-025,Minimum 10.01 with maximum 10 (above max),BVA/DT,,full,,F003-025,,,,,,10,10.01,,,,,,,,,,,,save,error.grademin=The minimum must be lower than the maximum | cancel | no_row=F003-025,,,,,
+TC-003-028,Minimum grade not a number,ECP,,full,,F003-028,,,,,,,abc,,,,,,,,,,,,save,error.grademin=You must enter a number here. | cancel | no_row=F003-028,,,,,
+TC-003-035,Grade to pass not a number,ECP,,full,,F003-035,,,,,,,,abc,,,,,,,,,,,save,error.gradepass=You must enter a number here. | cancel | no_row=F003-035,,,,,
+TC-003-071,Maximum 100000 (storage max+1),BVA,,full,,F003-071,,,,,,100000,,,,5,,,,,,,,,save,error.grademax=* | no_text=Error writing to database | no_row=F003-071,,,,,D003-04: 'Error writing to database' instead of a validation message under Maximum grade
+TC-003-076,Weight not a number,ECP,,full,,F003-076,,,,,,,,,,,,,,,on,abc,,,save,error.aggregationcoef2=You must enter a number here. | cancel | no_row=F003-076,,,,,

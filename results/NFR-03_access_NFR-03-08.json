@@ -1,0 +1,12 @@
+{
+ "tc_id": "NFR-03-08",
+ "role": "student",
+ "method": "get",
+ "request": "/grade/edit/tree/index.php?id=3",
+ "final_url": "http://127.0.0.1:9501/grade/edit/tree/index.php?id=3",
+ "message": "Sorry, but you do not currently have permissions to do that (Manage grade items).",
+ "expected": "denied",
+ "expected_result": "Sorry, but you do not currently have permissions to do that (Manage grade items).",
+ "item_before": null,
+ "item_after": null
+}

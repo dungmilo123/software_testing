@@ -1,0 +1,12 @@
+{
+ "tc_id": "NFR-03-18",
+ "role": "admin",
+ "method": "get",
+ "request": "/grade/edit/tree/index.php?id=3",
+ "final_url": "http://127.0.0.1:9501/grade/edit/tree/index.php?id=3",
+ "message": "",
+ "expected": "allowed",
+ "expected_result": "NFR03-target",
+ "item_before": null,
+ "item_after": null
+}

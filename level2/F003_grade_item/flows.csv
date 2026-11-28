@@ -1,0 +1,169 @@
+flow,step,keyword,target,value
+before_all,1,helper,reset_gradebook,
+after_all,1,helper,reset_gradebook,
+delete_items,1,helper,delete_all_items,
+reset_gradebook,1,helper,reset_gradebook,
+open_setup,1,open,course_page,
+open_setup,2,click,Grades link,
+open_setup,3,pause,1000,
+open_setup,4,click,Report menu,
+open_setup,5,submit,Gradebook setup option,
+open_setup,6,helper,dismiss_tour,
+open_setup,7,pause,1000,
+open_dialog,1,call,open_setup,
+open_dialog,2,click,Add menu,
+open_dialog,3,click,Add grade item option,
+open_dialog,4,pause,1000,
+open_full,1,call,open_dialog,
+open_full,2,submit,Show more link,
+open_full,3,pause,1000,
+open_full,4,verify,Form heading,New grade item
+edit_target,1,call,open_setup,
+edit_target,2,click,Target row menu,
+edit_target,3,pause,500,
+edit_target,4,click,Target row edit,
+edit_target,5,pause,1000,
+edit_target,6,submit,Show more link,
+edit_target,7,pause,1000,
+edit_target,8,verify,Form heading,Edit grade item
+create_ref,1,call,open_full,
+create_ref,2,set,Item name,${ref_name}
+create_ref,3,set,Maximum grade,${ref_max}
+create_ref,4,set,ID number,${ref_idnumber}
+create_ref,5,set,Overall decimal places,${ref_decimals}
+create_ref,6,submit,Save changes,
+create_ref,7,verify,Reference row max grade,${ref_max_shown}
+create_category,1,call,open_setup,
+create_category,2,click,Add menu,
+create_category,3,click,Add category option,
+create_category,4,pause,1000,
+create_category,5,set,Dialog category name,${category}
+create_category,6,click,Dialog save button,
+create_category,7,pause,1500,
+create_category,8,call,open_setup,
+create_category,9,verify,Category row,{{PRESENT}}
+add_valid,1,cleanup,delete_items,
+add_valid,2,call,open_full,
+add_valid,3,fill,,
+add_valid,4,submit,Save changes,
+add_valid,5,verify,Target row,{{PRESENT}}
+add_valid,6,verify,Target row max grade,${range}
+add_valid,7,verify,${row_check},${row_check_value}
+add_valid,8,verify,${row_check_2},${row_check_value_2}
+add_valid,9,call,edit_target,
+add_valid,10,verify_expected,,
+add_valid,11,click,Cancel,
+add_invalid,1,cleanup,delete_items,
+add_invalid,2,call,open_full,
+add_invalid,3,fill,,
+add_invalid,4,submit,Save changes,
+add_invalid,5,verify_expected,,
+add_invalid,6,click_if_present,Cancel,
+add_invalid,7,call,open_setup,
+add_invalid,8,verify,Target row,{{ABSENT}}
+add_invalid_ref,1,cleanup,delete_items,
+add_invalid_ref,2,call,create_ref,
+add_invalid_ref,3,call,open_full,
+add_invalid_ref,4,fill,,
+add_invalid_ref,5,submit,Save changes,
+add_invalid_ref,6,verify_expected,,
+add_invalid_ref,7,click_if_present,Cancel,
+add_invalid_ref,8,call,open_setup,
+add_invalid_ref,9,verify,Target row,{{ABSENT}}
+form_rule,1,cleanup,delete_items,
+form_rule,2,call,open_full,
+form_rule,3,verify,${before_element},${before_value}
+form_rule,4,verify,${before_element_2},${before_value_2}
+form_rule,5,fill,,
+form_rule,6,verify_expected,,
+form_rule,7,click,Cancel,
+lock_after,1,cleanup,delete_items,
+lock_after,2,call,open_full,
+lock_after,3,verify,${before_element},${before_value}
+lock_after,4,fill,,
+lock_after,5,verify,Lock after day,{{ENABLED}}
+lock_after,6,submit,Save changes,
+lock_after,7,verify,Target row,{{PRESENT}}
+lock_after,8,call,edit_target,
+lock_after,9,verify_expected,,
+lock_after,10,click,Cancel,
+cancel_full,1,cleanup,delete_items,
+cancel_full,2,call,open_full,
+cancel_full,3,fill,,
+cancel_full,4,submit,Cancel,
+cancel_full,5,verify_expected,,
+edit_item,1,cleanup,delete_items,
+edit_item,2,call,create_ref,
+edit_item,3,call,edit_target,
+edit_item,4,verify,${before_element},${before_value}
+edit_item,5,fill,,
+edit_item,6,submit,${submit_button},
+edit_item,7,call,open_setup,
+edit_item,8,verify_expected,,
+edit_item_reopen,1,cleanup,delete_items,
+edit_item_reopen,2,call,create_ref,
+edit_item_reopen,3,call,edit_target,
+edit_item_reopen,4,fill,,
+edit_item_reopen,5,submit,Save changes,
+edit_item_reopen,6,call,edit_target,
+edit_item_reopen,7,verify_expected,,
+edit_item_reopen,8,click,Cancel,
+correct_then_save,1,cleanup,delete_items,
+correct_then_save,2,call,open_full,
+correct_then_save,3,fill,,
+correct_then_save,4,submit,Save changes,
+correct_then_save,5,verify,Maximum grade error,${error_text}
+correct_then_save,6,set,Maximum grade,${then_value}
+correct_then_save,7,submit,Save changes,
+correct_then_save,8,verify_expected,,
+graded_item_rules,1,cleanup,delete_items,
+graded_item_rules,2,call,create_ref,
+graded_item_rules,3,helper,set_grade,${target};${student};${grade}
+graded_item_rules,4,call,edit_target,
+graded_item_rules,5,verify,Grade type,{{ABSENT}}
+graded_item_rules,6,verify,Rescale existing grades,Choose
+graded_item_rules,7,verify,Maximum grade,{{DISABLED}}
+graded_item_rules,8,set,Rescale existing grades,No
+graded_item_rules,9,verify,Maximum grade,{{ENABLED}}
+graded_item_rules,10,set,Rescale existing grades,Choose
+graded_item_rules,11,verify_expected,,
+graded_item_rules,12,click,Cancel,
+rescale,1,cleanup,delete_items,
+rescale,2,call,create_ref,
+rescale,3,helper,set_grade,${target};${student};${grade}
+rescale,4,call,edit_target,
+rescale,5,fill,,
+rescale,6,submit,Save changes,
+rescale,7,verify,Target row max grade,${range}
+rescale,8,helper,open_singleview,${target}
+rescale,9,verify_expected,,
+quick_dialog,1,cleanup,delete_items,
+quick_dialog,2,call,open_dialog,
+quick_dialog,3,verify,Dialog title,New grade item
+quick_dialog,4,fill,,
+quick_dialog,5,click,${dialog_button},
+quick_dialog,6,pause,1500,
+quick_dialog,7,call,open_setup,
+quick_dialog,8,verify_expected,,
+weight,1,cleanup,delete_items,
+weight,2,call,create_ref,
+weight,3,call,open_full,
+weight,4,fill,,
+weight,5,submit,Save changes,
+weight,6,verify_expected,,
+category_item,1,cleanup,delete_items,
+category_item,2,call,create_category,
+category_item,3,call,open_full,
+category_item,4,verify,${before_element},${before_value}
+category_item,5,fill,,
+category_item,6,submit,Save changes,
+category_item,7,verify,Target row,{{PRESENT}}
+category_item,8,call,edit_target,
+category_item,9,verify_expected,,
+category_item,10,click,Cancel,
+course_total_overflow,1,cleanup,reset_gradebook,
+course_total_overflow,2,call,create_ref,
+course_total_overflow,3,call,open_full,
+course_total_overflow,4,fill,,
+course_total_overflow,5,submit,Save changes,
+course_total_overflow,6,verify_expected,,

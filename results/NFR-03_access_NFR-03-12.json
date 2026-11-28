@@ -1,0 +1,12 @@
+{
+ "tc_id": "NFR-03-12",
+ "role": "student",
+ "method": "get",
+ "request": "/grade/report/grader/index.php?id=3",
+ "final_url": "http://127.0.0.1:9501/grade/report/grader/index.php?id=3",
+ "message": "Sorry, but you do not currently have permissions to do that (View grader report).",
+ "expected": "denied",
+ "expected_result": "Sorry, but you do not currently have permissions to do that (View grader report).",
+ "item_before": null,
+ "item_after": null
+}

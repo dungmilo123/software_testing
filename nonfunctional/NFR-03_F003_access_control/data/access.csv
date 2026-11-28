@@ -1,0 +1,19 @@
+tc_id,title,role,method,path,post_data,expected,expected_result,must_not_show,check_item
+NFR-03-01,Not logged in: Gradebook setup,guest,get,/grade/edit/tree/index.php?id={cid},,login,/login/index.php,{item},
+NFR-03-02,Not logged in: New grade item form,guest,get,/grade/edit/tree/item.php?courseid={cid},,login,/login/index.php,,
+NFR-03-03,Not logged in: Edit form of an existing grade item,guest,get,/grade/edit/tree/item.php?courseid={cid}&id={itemid},,login,/login/index.php,{item},
+NFR-03-04,Not logged in: Grader report,guest,get,/grade/report/grader/index.php?id={cid},,login,/login/index.php,{item},
+NFR-03-05,Not logged in: Single view of the grade item,guest,get,/grade/report/singleview/index.php?id={cid}&item=grade&itemid={itemid},,login,/login/index.php,{item},
+NFR-03-06,Not logged in: delete link of the grade item,guest,get,/grade/edit/tree/index.php?id={cid}&action=delete&confirm=1&eid=ig{itemid}&sesskey=x,,login,/login/index.php,,unchanged
+NFR-03-07,Not logged in: forged POST of the Edit form,guest,post,/grade/edit/tree/item.php,id={itemid}&courseid={cid}&sesskey=x&_qf__edit_item_form=1&itemname=HACKED&grademax=50&gradetype=1,login,/login/index.php,,unchanged
+NFR-03-08,Student: Gradebook setup,student,get,/grade/edit/tree/index.php?id={cid},,denied,"Sorry, but you do not currently have permissions to do that (Manage grade items).",{item},
+NFR-03-09,Student: New grade item form,student,get,/grade/edit/tree/item.php?courseid={cid},,denied,"Sorry, but you do not currently have permissions to do that (Manage grade items).",,
+NFR-03-10,Student: Edit form of an existing grade item,student,get,/grade/edit/tree/item.php?courseid={cid}&id={itemid},,denied,"Sorry, but you do not currently have permissions to do that (Manage grade items).",{item},
+NFR-03-11,Student: New grade category form,student,get,/grade/edit/tree/category.php?courseid={cid},,denied,"Sorry, but you do not currently have permissions to do that (Manage grade items).",,
+NFR-03-12,Student: Grader report,student,get,/grade/report/grader/index.php?id={cid},,denied,"Sorry, but you do not currently have permissions to do that (View grader report).",{item},
+NFR-03-13,Student: Single view of the grade item,student,get,/grade/report/singleview/index.php?id={cid}&item=grade&itemid={itemid},,denied,"Sorry, but you do not currently have permissions to do that (View single view).",{item},
+NFR-03-14,Student: hide link of the grade item (own valid sesskey),student,get,/grade/edit/tree/action.php?id={cid}&action=hide&eid=ig{itemid}&sesskey={sesskey},,denied,No permission to hide!,,unchanged
+NFR-03-15,Student: delete link of the grade item (own valid sesskey),student,get,/grade/edit/tree/index.php?id={cid}&action=delete&confirm=1&eid=ig{itemid}&sesskey={sesskey},,denied,"Sorry, but you do not currently have permissions to do that",,unchanged
+NFR-03-16,Student: forged POST of the Edit form (own valid sesskey),student,post,/grade/edit/tree/item.php,id={itemid}&courseid={cid}&sesskey={sesskey}&_qf__edit_item_form=1&itemname=HACKED&grademax=50&gradetype=1,denied,"Sorry, but you do not currently have permissions to do that",,unchanged
+NFR-03-17,Control: student opens own User report (allowed),student,get,/grade/report/user/index.php?id={cid},,allowed,Kt Student01,,
+NFR-03-18,Control: teacher/admin opens Gradebook setup (allowed),admin,get,/grade/edit/tree/index.php?id={cid},,allowed,{item},,

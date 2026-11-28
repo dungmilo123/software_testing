@@ -1,0 +1,12 @@
+{
+ "tc_id": "NFR-03-17",
+ "role": "student",
+ "method": "get",
+ "request": "/grade/report/user/index.php?id=3",
+ "final_url": "http://127.0.0.1:9501/grade/report/user/index.php?id=3",
+ "message": "",
+ "expected": "allowed",
+ "expected_result": "Kt Student01",
+ "item_before": null,
+ "item_after": null
+}

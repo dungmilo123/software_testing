@@ -1,0 +1,64 @@
+name,locator,kind,description
+Grades link,"xpath=//div[contains(@class,'secondary-navigation')]//a[normalize-space(.)='Grades']",link,course secondary navigation
+Report menu,"xpath=//div[contains(@class,'select-menu')]//*[@role='combobox']",button,gradebook navigation drop-down (Grader report / Gradebook setup / ...)
+Gradebook setup option,xpath=//li[@role='option' and normalize-space(.)='Gradebook setup'],link,
+Add menu,xpath=//a[@role='button' and @aria-label='Add'],button,Add drop-down of Gradebook setup
+Add grade item option,xpath=//a[@role='menuitem' and normalize-space(.)='Add grade item'],link,
+Add category option,xpath=//a[@role='menuitem' and normalize-space(.)='Add category'],link,
+Dialog title,css=.modal.show .modal-title,label,title of the open dialog
+Dialog category name,css=.modal.show input[name='fullname'],text,Add category dialog
+Dialog item name,css=.modal.show input[name='itemname'],text,quick New grade item dialog (random ids: addressed by name)
+Dialog maximum grade,css=.modal.show input[name='grademax'],text,quick New grade item dialog
+Dialog save button,css=.modal.show [data-action='save'],button,
+Dialog cancel button,css=.modal.show [data-action='cancel'],button,
+Show more link,css=.modal.show a.showadvancedform,link,opens the full form
+Form heading,xpath=//div[@role='main']//h2,label,New grade item / Edit grade item
+Item name,id=id_itemname,text,
+Item info,id=id_iteminfo,text,
+ID number,id=id_idnumber,text,
+Grade type,id=id_gradetype,select,Value / Scale / Text (not shown once the item has grades)
+Scale,id=id_scaleid,select,enabled when Grade type = Scale
+Rescale existing grades,id=id_rescalegrades,select,only shown when the item has grades
+Maximum grade,id=id_grademax,text,disabled until Rescale existing grades is chosen (graded item)
+Minimum grade,id=id_grademin,text,
+Grade to pass,id=id_gradepass,text,
+Grade display type,id=id_display,select,
+Overall decimal places,id=id_decimals,select,disabled when Grade display type = Letter
+Hidden,id=id_hidden,checkbox,disabled when Hidden until is enabled
+Hidden until enabled,id=id_hiddenuntil_enabled,checkbox,Enable box of Hidden until
+Hidden until day,id=id_hiddenuntil_day,select,
+Locked,id=id_locked,checkbox,
+Lock after,id=id_locktime,date,date selector; setting a date ticks its Enable box
+Lock after enabled,id=id_locktime_enabled,checkbox,
+Lock after day,id=id_locktime_day,select,
+Lock after month,id=id_locktime_month,select,
+Lock after year,id=id_locktime_year,select,
+Weight adjusted,id=id_weightoverride,checkbox,enables Weight
+Weight,id=id_aggregationcoef2,text,
+Extra credit,id=id_aggregationcoef,checkbox,
+Grade category,css=select#id_parentcategory,select,drop-down only on Add when the course has more than one category
+Grade category field,id=fitem_id_parentcategory,label,the whole Grade category row of the form
+Save changes,id=id_submitbutton,button,
+Cancel,id=id_cancel,button,
+Item name error,id=id_error_itemname,label,message under the field
+ID number error,id=id_error_idnumber,label,
+Scale error,id=id_error_scaleid,label,
+Maximum grade error,id=id_error_grademax,label,
+Minimum grade error,id=id_error_grademin,label,
+Grade to pass error,id=id_error_gradepass,label,
+Weight error,id=id_error_aggregationcoef2,label,
+Database error,"xpath=//p[contains(@class,'errormessage')]",label,Moodle exception page (Error writing to database)
+Target row,"xpath=//tr[@data-itemid][.//span[contains(@class,'gradeitemheader') and normalize-space(.)='${target}']]",label,Gradebook setup row of the item named in column target
+Target row max grade,"xpath=//tr[@data-itemid][.//span[contains(@class,'gradeitemheader') and normalize-space(.)='${target}']]/td[contains(@class,'column-range')]",label,
+Target row hidden icon,"xpath=//tr[@data-itemid][.//span[contains(@class,'gradeitemheader') and normalize-space(.)='${target}']]/td[contains(@class,'column-status')]//i[@title='Hidden']",label,
+Target row locked icon,"xpath=//tr[@data-itemid][.//span[contains(@class,'gradeitemheader') and normalize-space(.)='${target}']]/td[contains(@class,'column-status')]//i[@title='Locked']",label,
+Target row extra credit mark,"xpath=//tr[@data-itemid][.//span[contains(@class,'gradeitemheader') and normalize-space(.)='${target}']]/td[contains(@class,'column-range')]//abbr[@title='Extra credit']",label,
+Target row weight,"xpath=//tr[@data-itemid][.//span[contains(@class,'gradeitemheader') and normalize-space(.)='${target}']]//input[starts-with(@name,'weight_')]",text,
+Target row menu,"xpath=//tr[@data-itemid][.//span[contains(@class,'gradeitemheader') and normalize-space(.)='${target}']]//button[contains(@class,'cellmenubtn')]",button,Actions (...) of the row
+Target row edit,"xpath=//tr[@data-itemid][.//span[contains(@class,'gradeitemheader') and normalize-space(.)='${target}']]//a[@aria-label='Edit grade item']",link,
+Other row,"xpath=//tr[@data-itemid][.//span[contains(@class,'gradeitemheader') and normalize-space(.)='${other}']]",label,row of the item named in column other (renamed / discarded name)
+Reference row,"xpath=//tr[@data-itemid][.//span[contains(@class,'gradeitemheader') and normalize-space(.)='${ref_name}']]",label,row of the item created first (column ref_name)
+Reference row max grade,"xpath=//tr[@data-itemid][.//span[contains(@class,'gradeitemheader') and normalize-space(.)='${ref_name}']]/td[contains(@class,'column-range')]",label,
+Reference row weight,"xpath=//tr[@data-itemid][.//span[contains(@class,'gradeitemheader') and normalize-space(.)='${ref_name}']]//input[starts-with(@name,'weight_')]",text,
+Category row,xpath=//tr[@data-category][.//div[@class='rowtitle' and normalize-space(.)='${category}']],label,
+Student grade,"xpath=//tr[.//a[contains(normalize-space(.),'${student}')]]//input[starts-with(@name,'finalgrade_')]",text,grade input of the student in Single view

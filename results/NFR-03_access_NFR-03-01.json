@@ -1,0 +1,12 @@
+{
+ "tc_id": "NFR-03-01",
+ "role": "guest",
+ "method": "get",
+ "request": "/grade/edit/tree/index.php?id=3",
+ "final_url": "http://127.0.0.1:9501/login/index.php",
+ "message": "",
+ "expected": "login",
+ "expected_result": "/login/index.php",
+ "item_before": null,
+ "item_after": null
+}
