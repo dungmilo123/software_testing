@@ -1,0 +1,13 @@
+{
+  "tc_id": "NFR-02-06",
+  "title": "Attribute breakout in Assignment name",
+  "field": "name",
+  "payload": "\\\\\"><script>window.__xss='BREAK';alert('XSSNFR02_BREAK')</script>\"",
+  "alert_fired": null,
+  "executed_marker": null,
+  "raw_script_found": false,
+  "raw_onerror_found": false,
+  "url": "http://127.0.0.1:9501/course/modedit.php?update=183&return=1#",
+  "heading": "\\\\\">window.__xss='BREAK';alert('XSSNFR02_BREAK')\"",
+  "region_excerpt": "                 <div data-region=\"activity-information\" data-activityname=\"\\\\&quot;&amp;gt;window.__xss='BREAK';alert('XSSNFR02_BREAK')&quot;\" class=\"activity-information\">\n\n\n</div>\n</div>\n                        <div role=\"main\"><div class=\"container-fluid tertiary-navigation\">\n    <div class=\"d-flex\">\n        <div c"
+}

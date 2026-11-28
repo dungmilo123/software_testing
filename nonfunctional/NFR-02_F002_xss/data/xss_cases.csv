@@ -1,0 +1,9 @@
+tc_id,title,field,payload,expected_result,known_defect
+NFR-02-01,Script tag in Assignment name,name,<script>window.__xss='NAME';alert('XSSNFR02_NAME')</script>,Script must not execute; name is sanitised and no raw script tag is rendered,
+NFR-02-02,Image onerror handler in Assignment name,name,"<img src=x onerror=\window.__xss='IMG';alert('XSSNFR02_IMG')\"">""",Image event handler must not execute; name is sanitised,
+NFR-02-03,Script tag in Description,description,<script>window.__xss='DESC';alert('XSSNFR02_DESC')</script>,Script must not execute and must not be stored as executable HTML,NFR-02-D-01 Description stores a raw <script> that executes on the view page (admin-entered content)
+NFR-02-04,Image onerror handler in Description,description,"<img src=x onerror=\window.__xss='DESC_IMG';alert('XSSNFR02_DESC_IMG')\"">""",Image event handler must not execute in the rendered description,
+NFR-02-05,Script tag in Activity instructions,activity,<script>window.__xss='ACT';alert('XSSNFR02_ACT')</script>,Script must not execute and must not be stored as executable HTML,
+NFR-02-06,Attribute breakout in Assignment name,name,"\\""><script>window.__xss='BREAK';alert('XSSNFR02_BREAK')</script>""",Attribute breakout must not create an executable script,
+NFR-02-07,Safe markup plus script in Description,description,<b>Bold text</b><script>window.__xss='MIX';alert('XSSNFR02_MIX')</script>,Safe markup may remain but the script must be removed,NFR-02-D-01 Description stores a raw <script> that executes on the view page (admin-entered content)
+NFR-02-08,Encoded script text in Assignment name,name,&lt;script&gt;alert('XSSNFR02_ENC')&lt;/script&gt;,Encoded text must be displayed literally and must not execute,

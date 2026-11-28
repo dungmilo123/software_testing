@@ -1,0 +1,13 @@
+{
+  "tc_id": "NFR-02-08",
+  "title": "Encoded script text in Assignment name",
+  "field": "name",
+  "payload": "&lt;script&gt;alert('XSSNFR02_ENC')&lt;/script&gt;",
+  "alert_fired": null,
+  "executed_marker": null,
+  "raw_script_found": false,
+  "raw_onerror_found": false,
+  "url": "http://127.0.0.1:9501/course/modedit.php?update=185&return=1#",
+  "heading": "<script>alert('XSSNFR02_ENC')</script>",
+  "region_excerpt": "                                <div data-region=\"activity-information\" data-activityname=\"&amp;lt;script&amp;gt;alert('XSSNFR02_ENC')&amp;lt;/script&amp;gt;\" class=\"activity-information\">\n\n\n</div>\n</div>\n                        <div role=\"main\"><div class=\"container-fluid tertiary-navigation\">\n    <div class=\"d-flex\">"
+}

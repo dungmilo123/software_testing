@@ -1,0 +1,13 @@
+{
+  "tc_id": "NFR-02-02",
+  "title": "Image onerror handler in Assignment name",
+  "field": "name",
+  "payload": "<img src=x onerror=\\window.__xss='IMG';alert('XSSNFR02_IMG')\\\">\"",
+  "alert_fired": null,
+  "executed_marker": null,
+  "raw_script_found": false,
+  "raw_onerror_found": false,
+  "url": "http://127.0.0.1:9501/course/modedit.php",
+  "heading": "KT Test Course",
+  "region_excerpt": ""
+}

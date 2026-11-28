@@ -1,0 +1,13 @@
+{
+  "tc_id": "NFR-02-03",
+  "title": "Script tag in Description",
+  "field": "description",
+  "payload": "<script>window.__xss='DESC';alert('XSSNFR02_DESC')</script>",
+  "alert_fired": null,
+  "executed_marker": "DESC",
+  "raw_script_found": true,
+  "raw_onerror_found": false,
+  "url": "http://127.0.0.1:9501/course/modedit.php?update=180&return=1#",
+  "heading": "XSS NFR-02-03",
+  "region_excerpt": "        <div class=\"box py-3 generalbox boxaligncenter\"><div class=\"no-overflow\"><p>\n<script>window.__xss='DESC';alert('XSSNFR02_DESC')</script>\n</p></div></div>\n                                    </div>\n                                </div>\n                        <div role=\"main\"><div class=\"container-fluid tertiar"
+}

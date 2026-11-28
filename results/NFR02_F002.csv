@@ -1,0 +1,27 @@
+tc_id,title,status,known_defect,seconds,message,screenshot,data_file,test
+NFR-02-01,Script tag in Assignment name,PASS,,12.24,,,xss_cases.csv,test_nfr02_xss.NFR02AssignmentXSS.test_NFR_02_01
+NFR-02-02,Image onerror handler in Assignment name,PASS,,9.68,,,xss_cases.csv,test_nfr02_xss.NFR02AssignmentXSS.test_NFR_02_02
+NFR-02-03,Script tag in Description,FAIL,NFR-02-D-01 Description stores a raw <script> that executes on the view page (admin-entered content),11.35,"Lists differ: [] != [""NFR-02-03: JavaScript payload executed ([124 chars]02""']
+
+Second list contains 2 additional elements.
+First extra element 0:
+""NFR-02-03: JavaScript payload executed (window.__xss='DESC')""
+
+- []
++ [""NFR-02-03: JavaScript payload executed (window.__xss='DESC')"",
++  'NFR-02-03/view: raw executable <script> payload found: '
++  '""<script>window.__xss=\'DESC\';alert(\'XSSNFR02""']",results/screenshots/test_NFR_02_03.png,xss_cases.csv,test_nfr02_xss.NFR02AssignmentXSS.test_NFR_02_03
+NFR-02-04,Image onerror handler in Description,PASS,,11.73,,,xss_cases.csv,test_nfr02_xss.NFR02AssignmentXSS.test_NFR_02_04
+NFR-02-05,Script tag in Activity instructions,PASS,,11.08,,,xss_cases.csv,test_nfr02_xss.NFR02AssignmentXSS.test_NFR_02_05
+NFR-02-06,Attribute breakout in Assignment name,PASS,,11.72,,,xss_cases.csv,test_nfr02_xss.NFR02AssignmentXSS.test_NFR_02_06
+NFR-02-07,Safe markup plus script in Description,FAIL,NFR-02-D-01 Description stores a raw <script> that executes on the view page (admin-entered content),11.3,"Lists differ: [] != [""NFR-02-07: JavaScript payload executed ([122 chars]02""']
+
+Second list contains 2 additional elements.
+First extra element 0:
+""NFR-02-07: JavaScript payload executed (window.__xss='MIX')""
+
+- []
++ [""NFR-02-07: JavaScript payload executed (window.__xss='MIX')"",
++  'NFR-02-07/view: raw executable <script> payload found: '
++  '""<script>window.__xss=\'MIX\';alert(\'XSSNFR02""']",results/screenshots/test_NFR_02_07.png,xss_cases.csv,test_nfr02_xss.NFR02AssignmentXSS.test_NFR_02_07
+NFR-02-08,Encoded script text in Assignment name,PASS,,11.94,,,xss_cases.csv,test_nfr02_xss.NFR02AssignmentXSS.test_NFR_02_08
