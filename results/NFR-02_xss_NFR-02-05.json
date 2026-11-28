@@ -1,0 +1,13 @@
+{
+  "tc_id": "NFR-02-05",
+  "title": "Script tag in Activity instructions",
+  "field": "activity",
+  "payload": "<script>window.__xss='ACT';alert('XSSNFR02_ACT')</script>",
+  "alert_fired": null,
+  "executed_marker": null,
+  "raw_script_found": false,
+  "raw_onerror_found": false,
+  "url": "http://127.0.0.1:9501/course/modedit.php?update=182&return=1#",
+  "heading": "XSS NFR-02-05",
+  "region_excerpt": ""
+}

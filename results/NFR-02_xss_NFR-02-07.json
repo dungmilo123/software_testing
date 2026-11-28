@@ -1,0 +1,13 @@
+{
+  "tc_id": "NFR-02-07",
+  "title": "Safe markup plus script in Description",
+  "field": "description",
+  "payload": "<b>Bold text</b><script>window.__xss='MIX';alert('XSSNFR02_MIX')</script>",
+  "alert_fired": null,
+  "executed_marker": "MIX",
+  "raw_script_found": true,
+  "raw_onerror_found": false,
+  "url": "http://127.0.0.1:9501/course/modedit.php?update=184&return=1#",
+  "heading": "XSS NFR-02-07",
+  "region_excerpt": "ralbox boxaligncenter\"><div class=\"no-overflow\"><p><strong>Bold text</strong></p>\n<p>\n<script>window.__xss='MIX';alert('XSSNFR02_MIX')</script>\n</p></div></div>\n                                    </div>\n                                </div>\n                        <div role=\"main\"><div class=\"container-fluid tertiary"
+}

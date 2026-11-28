@@ -1,0 +1,107 @@
+{
+ "tag": "NFR02_F002",
+ "base_url": "http://127.0.0.1:9501",
+ "browser": "chrome",
+ "started": "2026-11-28 16:20:37",
+ "seconds": 95.6,
+ "total": 8,
+ "passed": 6,
+ "failed": 2,
+ "errors": 0,
+ "failed_known_defect": [
+  "NFR-02-03",
+  "NFR-02-07"
+ ],
+ "failed_unexpected": [],
+ "passed_but_marked_defect": [],
+ "cases": [
+  {
+   "test": "test_nfr02_xss.NFR02AssignmentXSS.test_NFR_02_01",
+   "tc_id": "NFR-02-01",
+   "title": "Script tag in Assignment name",
+   "data_file": "xss_cases.csv",
+   "status": "PASS",
+   "known_defect": "",
+   "seconds": 12.24,
+   "message": "",
+   "screenshot": ""
+  },
+  {
+   "test": "test_nfr02_xss.NFR02AssignmentXSS.test_NFR_02_02",
+   "tc_id": "NFR-02-02",
+   "title": "Image onerror handler in Assignment name",
+   "data_file": "xss_cases.csv",
+   "status": "PASS",
+   "known_defect": "",
+   "seconds": 9.68,
+   "message": "",
+   "screenshot": ""
+  },
+  {
+   "test": "test_nfr02_xss.NFR02AssignmentXSS.test_NFR_02_03",
+   "tc_id": "NFR-02-03",
+   "title": "Script tag in Description",
+   "data_file": "xss_cases.csv",
+   "status": "FAIL",
+   "known_defect": "NFR-02-D-01 Description stores a raw <script> that executes on the view page (admin-entered content)",
+   "seconds": 11.35,
+   "message": "Lists differ: [] != [\"NFR-02-03: JavaScript payload executed ([124 chars]02\"']\n\nSecond list contains 2 additional elements.\nFirst extra element 0:\n\"NFR-02-03: JavaScript payload executed (window.__xss='DESC')\"\n\n- []\n+ [\"NFR-02-03: JavaScript payload executed (window.__xss='DESC')\",\n+  'NFR-02-03/view: raw executable <script> payload found: '\n+  '\"<script>window.__xss=\\'DESC\\';alert(\\'XSSNFR02\"']",
+   "screenshot": "results/screenshots/test_NFR_02_03.png"
+  },
+  {
+   "test": "test_nfr02_xss.NFR02AssignmentXSS.test_NFR_02_04",
+   "tc_id": "NFR-02-04",
+   "title": "Image onerror handler in Description",
+   "data_file": "xss_cases.csv",
+   "status": "PASS",
+   "known_defect": "",
+   "seconds": 11.73,
+   "message": "",
+   "screenshot": ""
+  },
+  {
+   "test": "test_nfr02_xss.NFR02AssignmentXSS.test_NFR_02_05",
+   "tc_id": "NFR-02-05",
+   "title": "Script tag in Activity instructions",
+   "data_file": "xss_cases.csv",
+   "status": "PASS",
+   "known_defect": "",
+   "seconds": 11.08,
+   "message": "",
+   "screenshot": ""
+  },
+  {
+   "test": "test_nfr02_xss.NFR02AssignmentXSS.test_NFR_02_06",
+   "tc_id": "NFR-02-06",
+   "title": "Attribute breakout in Assignment name",
+   "data_file": "xss_cases.csv",
+   "status": "PASS",
+   "known_defect": "",
+   "seconds": 11.72,
+   "message": "",
+   "screenshot": ""
+  },
+  {
+   "test": "test_nfr02_xss.NFR02AssignmentXSS.test_NFR_02_07",
+   "tc_id": "NFR-02-07",
+   "title": "Safe markup plus script in Description",
+   "data_file": "xss_cases.csv",
+   "status": "FAIL",
+   "known_defect": "NFR-02-D-01 Description stores a raw <script> that executes on the view page (admin-entered content)",
+   "seconds": 11.3,
+   "message": "Lists differ: [] != [\"NFR-02-07: JavaScript payload executed ([122 chars]02\"']\n\nSecond list contains 2 additional elements.\nFirst extra element 0:\n\"NFR-02-07: JavaScript payload executed (window.__xss='MIX')\"\n\n- []\n+ [\"NFR-02-07: JavaScript payload executed (window.__xss='MIX')\",\n+  'NFR-02-07/view: raw executable <script> payload found: '\n+  '\"<script>window.__xss=\\'MIX\\';alert(\\'XSSNFR02\"']",
+   "screenshot": "results/screenshots/test_NFR_02_07.png"
+  },
+  {
+   "test": "test_nfr02_xss.NFR02AssignmentXSS.test_NFR_02_08",
+   "tc_id": "NFR-02-08",
+   "title": "Encoded script text in Assignment name",
+   "data_file": "xss_cases.csv",
+   "status": "PASS",
+   "known_defect": "",
+   "seconds": 11.94,
+   "message": "",
+   "screenshot": ""
+  }
+ ]
+}

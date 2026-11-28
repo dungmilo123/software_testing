@@ -1,0 +1,107 @@
+tc_id,title,status,known_defect,seconds,message,screenshot,data_file,test
+TC-002-001,Create assignment with minimal valid data and defaults,PASS,,3.81,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_001
+TC-002-002,Empty assignment name (required),PASS,,8.27,,,validation.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_002
+TC-002-003,Whitespace-only assignment name,PASS,,8.15,,,validation.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_003
+TC-002-004,Assignment name with HTML tags and special characters,PASS,,7.31,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_004
+TC-002-005,Description and Activity instructions are saved,PASS,,9.69,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_005
+TC-002-006,Additional files area and Only show files during submission enabled,PASS,,10.69,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_006
+TC-002-007,All availability dates disabled,PASS,,9.64,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_007
+TC-002-008,Allow-from date enabled with Always show description,PASS,,11.27,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_008
+TC-002-009,All four availability dates enabled in valid order,PASS,,12.72,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_009
+TC-002-010,Time limit enabled with 30 minutes,PASS,,11.0,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_010
+TC-002-011,File submissions disabled and Online text enabled,PASS,,11.28,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_011
+TC-002-012,File submissions with Maximum number of uploaded files = 1,PASS,,9.52,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_012
+TC-002-013,File submissions with Maximum number of uploaded files = 20,PASS,,9.23,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_013
+TC-002-014,Maximum submission size 1 MB and PDF-only accepted file types,PASS,,9.76,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_014
+TC-002-015,Online text word limit 100 enabled,PASS,,11.85,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_015
+TC-002-016,Online text word limit disabled,PASS,,10.49,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_016
+TC-002-017,Feedback comments enabled with Comment inline = No,PASS,,9.45,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_017
+TC-002-018,Feedback comments enabled with Comment inline = Yes,PASS,,9.5,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_018
+TC-002-019,Feedback files and Annotate PDF enabled,PASS,,10.69,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_019
+TC-002-020,Require students to click the submit button enabled,PASS,,9.35,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_020
+TC-002-021,Require that students accept the submission statement enabled,PASS,,9.36,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_021
+TC-002-022,Allowed attempts = 2 with Grant attempts = Manually,PASS,,9.53,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_022
+TC-002-023,Allowed attempts = Unlimited with Grant attempts = Automatically until pass,PASS,,9.49,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_023
+TC-002-024,Students submit in groups without grouping and require group = Yes,PASS,,9.71,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_024
+TC-002-025,Students submit in groups with grouping G1 and require all group members submit,PASS,,13.4,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_025
+TC-002-026,Notify graders about submissions = Yes disables late notifications,PASS,,9.72,,,ui.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_026
+TC-002-027,Notify graders = No with late notifications = Yes and Notify student = No,PASS,,9.63,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_027
+TC-002-028,Grade type None,PASS,,7.44,,,ui.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_028
+TC-002-029,Grade type Point with Maximum grade 100,PASS,,9.44,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_029
+TC-002-030,Grade type Scale with Default competence scale,PASS,,9.27,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_030
+TC-002-031,Grade to pass set to 50,PASS,,9.82,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_031
+TC-002-032,Anonymous submissions and Hide grader identity enabled,PASS,,9.38,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_032
+TC-002-033,"Use marking workflow, allocation and partial release while anonymous",PASS,,9.84,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_033
+TC-002-034,Grade penalties enabled with Due date and Point grade,PASS,,10.94,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_034
+TC-002-035,Assignment name length = 1 (lower boundary),PASS,,7.15,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_035
+TC-002-036,Assignment name length = 1333 (upper boundary),PASS,,7.32,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_036
+TC-002-037,Assignment name length = 1334 (above upper boundary),PASS,,8.3,,,validation.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_037
+TC-002-038,Due date equal to allow-from date,PASS,,9.9,,,validation.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_038
+TC-002-039,Due date one minute after allow-from date,PASS,,9.67,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_039
+TC-002-040,Cut-off date equal to due date,PASS,,11.52,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_040
+TC-002-041,Cut-off date one minute before due date,PASS,,10.26,,,validation.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_041
+TC-002-042,Cut-off date equal to allow-from date with due date disabled,PASS,,11.11,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_042
+TC-002-043,Remind me to grade by equal to due date,PASS,,11.84,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_043
+TC-002-044,Remind me to grade by one minute before due date,PASS,,10.5,,,validation.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_044
+TC-002-045,Remind me to grade by equal to allow-from date with due date disabled,PASS,,11.18,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_045
+TC-002-046,Maximum number of uploaded files = 1 (lower boundary),PASS,,9.59,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_046
+TC-002-047,Maximum number of uploaded files = 20 (upper boundary),PASS,,9.17,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_047
+TC-002-048,Word limit = -1 (below lower boundary),FAIL,D-01 Word limit accepts -1,10.01,"Lists differ: [] != [""error under 'assignsubmission_onlinetext_wordlimit': expected '*', got ''""]
+
+Second list contains 1 additional elements.
+First extra element 0:
+""error under 'assignsubmission_onlinetext_wordlimit': expected '*', got ''""
+
+- []
++ [""error under 'assignsubmission_onlinetext_wordlimit': expected '*', got ''""]",results/screenshots/test_TC_002_048.png,validation.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_048
+TC-002-049,Word limit = 0 (lower boundary resets to disabled),PASS,,11.78,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_049
+TC-002-050,Word limit = 1 (minimum positive),PASS,,12.18,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_050
+TC-002-051,Word limit = 999999 (six-digit maximum),PASS,,11.9,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_051
+TC-002-052,Word limit = 1000000 (above six-digit maximum),FAIL,D-03 Word limit 1000000 accepted past maxlength=6,10.1,"Lists differ: [] != [""error under 'assignsubmission_onlinetext_wordlimit': expected '*', got ''""]
+
+Second list contains 1 additional elements.
+First extra element 0:
+""error under 'assignsubmission_onlinetext_wordlimit': expected '*', got ''""
+
+- []
++ [""error under 'assignsubmission_onlinetext_wordlimit': expected '*', got ''""]",results/screenshots/test_TC_002_052.png,validation.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_052
+TC-002-053,Word limit non-numeric 'abc',PASS,,11.02,,,validation.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_053
+TC-002-054,Allowed attempts = Unlimited (-1),PASS,,9.93,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_054
+TC-002-055,Allowed attempts = 1 (lower finite boundary),PASS,,7.82,,,ui.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_055
+TC-002-056,Allowed attempts = 30 (upper finite boundary),PASS,,9.68,,,ui.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_056
+TC-002-057,Maximum grade = 1 (lower boundary),PASS,,10.05,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_057
+TC-002-058,Maximum grade = 100 (upper boundary),PASS,,9.62,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_058
+TC-002-059,Maximum grade = 101 (above upper boundary),PASS,,8.39,,,validation.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_059
+TC-002-060,Maximum grade = 0 (below lower boundary),PASS,,7.99,,,validation.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_060
+TC-002-061,Maximum grade = -1 (negative),PASS,,8.06,,,validation.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_061
+TC-002-062,Maximum grade = 'abc' (non-numeric),PASS,,8.0,,,validation.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_062
+TC-002-063,Grade to pass = 0 (lower boundary),PASS,,9.82,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_063
+TC-002-064,Grade to pass = 100 (upper boundary),PASS,,9.94,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_064
+TC-002-065,Grade to pass = 100.01 (above upper boundary),PASS,,8.71,,,validation.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_065
+TC-002-066,Grade to pass = -1 (below lower boundary),FAIL,D-02 Grade to pass accepts -1,8.04,"Lists differ: [] != [""error under 'gradepass': expected '*', got ''""]
+
+Second list contains 1 additional elements.
+First extra element 0:
+""error under 'gradepass': expected '*', got ''""
+
+- []
++ [""error under 'gradepass': expected '*', got ''""]",results/screenshots/test_TC_002_066.png,validation.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_066
+TC-002-067,Grade to pass = 'abc' (non-numeric),PASS,,8.29,,,validation.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_067
+TC-002-068,DT1-R1: all availability dates disabled,PASS,,7.41,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_068
+TC-002-069,DT1-R2: due date not after allow-from rejected,PASS,,10.4,,,validation.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_069
+TC-002-070,DT1-R3: cut-off earlier than due date rejected,PASS,,10.66,,,validation.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_070
+TC-002-071,DT1-R4: grading due earlier than due date rejected,PASS,,10.59,,,validation.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_071
+TC-002-072,DT1-R5: cut-off == due and grading due == due accepted,PASS,,12.88,,,create.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_072
+TC-002-073,DT2-R1: Allowed attempts = 1 hides Grant attempts,PASS,,7.45,,,ui.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_073
+TC-002-074,DT2-R2: Anonymous submissions + multiple attempts + Automatically until pass rejected,PASS,,8.16,,,validation.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_074
+TC-002-075,DT3-R1: group submission with submit button enables require all group members,PASS,,7.84,,,ui.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_075
+TC-002-076,DT4-R1: Grade type None hides Grade to pass and Grade category,PASS,,7.72,,,ui.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_076
+TC-002-077,DT5-R1: workflow + allocation + partial release + anonymous submissions,PASS,,8.18,,,ui.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_077
+TC-002-078,S1/P1: main flow - create assignment and Save and display,PASS,,7.51,,,scenarios.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_078
+TC-002-079,S2/P2: alternate flow - Save and return to course,PASS,,7.83,,,scenarios.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_079
+TC-002-080,S3/P3: alternate flow - Cancel discards new assignment,PASS,,7.55,,,scenarios.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_080
+TC-002-081,"S4/P4: exception flow - empty name client error, correct and Save and display",PASS,,9.72,,,scenarios.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_081
+TC-002-082,"S5/P5: exception flow - due-date server error, correct and Save and display",PASS,,11.78,,,scenarios.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_082
+TC-002-083,S6/P6: alternate flow - edit existing assignment settings and save,PASS,,13.77,,,scenarios.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_083
+TC-002-084,S7/P7: alternate flow - configure file + online text and inline comment feedback,PASS,,10.65,,,scenarios.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_084
+TC-002-085,S8/P8: alternate flow - team submission with grouping G1,PASS,,13.52,,,scenarios.csv,test_f002_assignment_settings.F002AssignmentSettings.test_TC_002_085

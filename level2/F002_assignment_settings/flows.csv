@@ -1,0 +1,63 @@
+flow,step,keyword,target,value
+before_all,1,helper,delete_assignments,
+before_all,2,helper,ensure_time_limit,
+before_all,3,helper,ensure_grouping,
+after_all,1,helper,delete_assignments,
+after_all,2,helper,remove_grouping,
+delete_assignments,1,helper,delete_assignments,
+open_form,1,helper,open_new_assignment,
+open_form,2,verify,Form heading,New Assignment
+save_display,1,cleanup,delete_assignments,
+save_display,2,call,open_form,
+save_display,3,fill,,
+save_display,4,helper,set_reopen,${attemptreopenmethod}
+save_display,5,submit,Save and display,
+save_display,6,verify_expected,,
+save_return,1,cleanup,delete_assignments,
+save_return,2,call,open_form,
+save_return,3,fill,,
+save_return,4,helper,set_reopen,${attemptreopenmethod}
+save_return,5,submit,Save and return,
+save_return,6,verify_expected,,
+validate,1,cleanup,delete_assignments,
+validate,2,call,open_form,
+validate,3,fill,,
+validate,4,helper,set_reopen,${attemptreopenmethod}
+validate,5,submit,Save and return,
+validate,6,verify_expected,,
+cancel,1,call,open_form,
+cancel,2,fill,,
+cancel,3,submit,Cancel,
+cancel,4,verify_expected,,
+ui,1,cleanup,delete_assignments,
+ui,2,call,open_form,
+ui,3,fill,,
+ui,4,helper,set_reopen,${attemptreopenmethod}
+ui,5,submit,Save and display,
+ui,6,verify_expected,,
+scenario_empty_then_fix,1,cleanup,delete_assignments,
+scenario_empty_then_fix,2,call,open_form,
+scenario_empty_then_fix,3,fill,,
+scenario_empty_then_fix,4,submit,Save and display,
+scenario_empty_then_fix,5,verify_expected,,
+scenario_empty_then_fix,6,set,name,${then_name}
+scenario_empty_then_fix,7,submit,Save and display,
+scenario_empty_then_fix,8,verify,Page heading,${then_name}
+scenario_due_then_fix,1,cleanup,delete_assignments,
+scenario_due_then_fix,2,call,open_form,
+scenario_due_then_fix,3,fill,,
+scenario_due_then_fix,4,submit,Save and display,
+scenario_due_then_fix,5,verify_expected,,
+scenario_due_then_fix,6,set,date,${then_date}
+scenario_due_then_fix,7,submit,Save and display,
+scenario_due_then_fix,8,verify,Page heading,${name}
+scenario_edit,1,cleanup,delete_assignments,
+scenario_edit,2,call,open_form,
+scenario_edit,3,fill,,
+scenario_edit,4,submit,Save and return,
+scenario_edit,5,verify_expected,,
+scenario_edit,6,helper,open_assignment_settings,${name}
+scenario_edit,7,set,name,${then_name}
+scenario_edit,8,set,grade_point,${then_grade}
+scenario_edit,9,submit,Save and display,
+scenario_edit,10,verify,Page heading,${then_name}
